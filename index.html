@@ -4,19 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zenexa Infotech</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<script src="./assets/js/tailwind.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
 </script>
 <style> 
-.inter-tight {
-  font-family: "Inter Tight", sans-serif;
+.Saira {
+  font-family: "Saira", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -33,7 +32,7 @@
 {
   background-color:#004b5b;
 }
-.text-parimary
+.text-primary
 {
   color:#004b5b;
 }
@@ -45,6 +44,18 @@
 {
   background-color:#0a816f;
 }
+.btn-secondary
+{
+  background-color:#0a816f;
+}
+.btn-secondary:hover
+{
+  background-color:#004b5b;
+}
+.border-primary 
+{
+  border-color:#004b5b;
+}
 header{
   z-index: 10000!important;
 }
@@ -54,7 +65,6 @@ header{
     100% { transform: translateY(0); }
   }
   .float-animation { animation: float 5s ease-in-out infinite; }
-
   @keyframes fadeUp {
     0% { opacity: 0; transform: translateY(40px); }
     100% { opacity: 1; transform: translateY(0); }
@@ -62,9 +72,9 @@ header{
   .fade-up { animation: fadeUp 1s ease-out forwards; }
 </style>
 </head>
-<body class="inter-tight">
+<body class="">
 <header class="sticky top-0">
-    <nav class="w-full backdrop-blur-xl bg-white/40 shadow-sm">
+    <nav class="w-full backdrop-blur-xl bg-white/80 shadow-sm">
       <div class="max-w-7xl mx-auto px-6  flex items-center justify-between">
         <!-- Logo -->
         <div class="flex items-center py-4 space-x-2">
@@ -72,7 +82,6 @@ header{
           <div class="flex flex-col leading-tight">
             <span class="text-lg font-bold text-teal-700">ZENEXA
             </span>
-            <span class="text-xs tracking-wide font-semibold text-gray-700">HEALTHCARE</span>
           </div>
         </div>
         <!-- Nav links -->
@@ -95,10 +104,11 @@ header{
                         <h3 class="text-xl font-bold px-2 uppercase mb-3">Our Services</h3>
                         <div class="w-full flex flex-wrap">
                           <div class="w-1/3 mb-4 px-2">
-                              <div class="h-full py-4 px-6 border-l-4 transition hover:bg-gray-200 hover:border-[#004b5b] bg-gray-100">
+                            <a href=""></a>
+                              <div href="./services/provider-outreach.html" class="w-full py-4 px-6 border-l-4 transition hover:bg-gray-200 hover:border-[#004b5b] bg-gray-100">
                                   <h3 class="text-md  font-bold text-md ">Provider Outreach Services</h3>
-                                </div>
-                          </div>
+                              </div>
+                            </a>
                           <div class="w-1/3 mb-4 px-2">
                               <div class="h-full py-4 px-6 border-l-4 transition hover:bg-gray-200 hover:border-[#004b5b]  bg-gray-100">
                                   <h3 class="text-md font-bold text-md">Data Entry & Document Indexing</h3>
@@ -135,7 +145,7 @@ header{
                           <p class="text-sm text-gray-600">Grab More Details.</p>
                         </div>
                         <div>
-                          <a href="#" class="px-5 py-2 bg-primary text-white rounded-md hover:bg-primary transition">View More</a>
+                          <a href="services.html" class="px-5 py-2 bg-primary text-white rounded-md hover:bg-primary transition">View More</a>
                         </div>
                       </div>
                     </div>
@@ -148,16 +158,16 @@ header{
             <span class="uppercase font-bold">RESOURCES</span>
           </div>
           <div class="flex items-center transition hover:text-gray-600 px-6 py-6 cursor-pointer text-gray-700 hover:text-teal-600">
-            <span class="uppercase font-bold">Careers</span>
+            <a href="http://careers.zenexainfotech.com" class="uppercase font-bold">Careers</a>
            
           </div>
         </div>
         <!-- Buttons -->
         <div class="flex items-center uppercase space-x-4">
-          <button class="px-5 py-2 border border-orange-500 text-secondary font-semibold rounded-lg  transition">
+          <button class="px-5 py-2 border border-primary text-primary uppercase backdrop-blur-4xl bg-white/40 font-bold rounded-sm transition">
             Contact us
           </button>
-          <button class="px-5 py-2 bg-primary text-white rounded-lg font-semibold  transition">
+          <button class="px-5 py-2 bg-primary text-white rounded-sm font-semibold  transition">
             LOGIN
           </button>
         </div>
@@ -165,7 +175,7 @@ header{
     </nav>
 </header>
 <!-- hero section -->
-<section class="h-screen px-6 py-40" style="background-image:url('./assets/hero_bg.jpeg');">
+<section class="h-screen  px-6 py-40" style="background:url('assets/hero_bg.jpeg');">
   <div class="max-w-7xl mx-auto">
     <div style="height: calc(100vh - 300px);" class="max-w-7xl grid grid-cols-1  flex items-center justify-between">
       <div class="absolute top-16 left-16 w-20 h-20 bg-teal-500/15 rounded-full blur-2xl float-animation"></div>
@@ -175,7 +185,7 @@ header{
         <div class="w-[450px] h-[450px] bg-teal-300/20 blur-[130px] rounded-full"></div>
       </div>
       <div class="w-full">
-        <h2 class="text-[80px] uppercase font-black text-[#004b5b] text-center leading-tight mb-20">
+        <h2 class="md:text-[80px] Saira text-[40px] uppercase font-black text-[#004b5b] text-center leading-tight mb-20">
           Where Compliance,
           <br>
           Meets Performance
@@ -183,22 +193,22 @@ header{
       </div>
       <div class="w-full flex flex-wrap">
         <div class="w-full flex">
-          <button  class="px-5 float-animation mx-auto py-2 w-1/4 py-10 bg-secondary  text-white text-xl font-semibold rounded-md text-center hover:bg-[#e4623d] transition"  style="animation-delay:0.4s">
+          <button class="px-5 float-animation mx-auto py-2 md:w-1/4 w-auto md:text-xl py-10 btn-secondary text-white text-md font-semibold rounded-md text-center transition" style="animation-delay:0.9s">
             Book Your Free Expert Consultation Today !
           </button>
         </div>
       </div>
        <div class="w-full flex flex-wrap text-center">
-        <div class="mt-12 grid-cols-3 mx-auto flex gap-4 flex-wrap">
-            <div class="backdrop-blur-xl bg-white/40 border border-white/30 p-10 rounded-xl shadow float-animation">
+        <div class="mt-12 mx-auto flex flex-wrap">
+            <div class="backdrop-blur-xl w-full md:w-1/3 bg-white/40 border border-white/30 p-10  sm:rounded-xl md:rounded-none md:rounded-tl-xl md:rounded-bl-xl float-animation">
               <p class="text-5xl font-bold text-teal-700">98%</p>
               <p class="text-md pt-2 text-gray-600">Client Satisfaction</p>
             </div>
-            <div class="backdrop-blur-xl bg-white/40 border border-white/30 p-10 rounded-xl shadow float-animation" style="animation-delay:0.8s">
+            <div class="backdrop-blur-xl w-full md:w-1/3 bg-white/40 border-x md:border-gray-200 py-10 px-20 rounded-xl md:rounded-none  float-animation">
               <p class="text-5xl font-bold text-teal-700">24/7</p>
-              <p class="text-md pt-2 text-gray-600">Compliance Monitoring</p>
+              <p class="text-md pt-2 text-gray-600">Monitoring</p>
             </div>
-            <div class="backdrop-blur-xl bg-white/40 border border-white/30 p-10 rounded-xl shadow float-animation" style="animation-delay:1.2s">
+            <div class="backdrop-blur-xl w-full md:w-1/3 bg-white/40 border border-white/30 p-10  sm:rounded-xl md:rounded-none md:rounded-tr-xl md:rounded-br-xl  float-animation">
               <p class="text-5xl font-bold text-teal-700">500+</p>
               <p class="text-md pt-2 text-gray-600">Healthcare Partners</p>
             </div>
@@ -208,25 +218,24 @@ header{
   </div>
 </section>
 <!--  tagline -->
-<section class="bg-primary py-32">
+<section class="bg-gradient-to-br from-[#004b5b] to-[#0a816f] py-32">
   <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-    <h1 class="text-[60px] md:text-[70px] font-bold text-white">
+    <h1 class="text-[60px] Saira md:text-[70px] font-bold text-white">
      Fueling Innovation to Achieve the Extraordinary in Care
     </h1>
   </div>
 </section>
+<!--  -->
 <section class="bg-white py-24">
   <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-    <h1 class="text-[1px]  md:text-[50px] font-bold text-secondary">
-     <span class="text-parimary">
+    <h1 class="text-[1px] md:text-[50px] font-bold text-secondary">
+     <span class="text-parimary Saira">
        About
      </span>
      Zenexa
     </h1>
-    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
-      We are a global clinical research organization that blends scientific knowledge
-      with a human touch. Broad perspectives and local expertise enrich our network
-      with dedicated teams as invested in your project’s success as you are.
+    <p class="mt-4 text-lg text-black font-semibold max-w-3xl mx-auto">
+      Your Trusted Partner in Powering Smarter Healthcare Solutions
     </p>
   </div>
 
@@ -241,28 +250,15 @@ header{
         </svg>
       </div>
       <h2 class="text-3xl font-semibold text-gray-800">
-        The World Leader in Renal Research
+        Who we are
       </h2>
-
-      <p class="mt-4 text-gray-600 leading-relaxed text-justify">
-        Partner with the global experts driving meaningful progress in kidney disease
-        treatment, clinical practice, and policy. With an extensive site network and
-        over 80 renal studies conducted across 50+ countries, Emerald Clinical is the
-        CRO of choice for renal innovation worldwide.
+      <p class="mt-4 text-gray-600 leading-relaxed text-md font-medium text-justify">
+       At Zenexa Infotech, we simplify complex healthcare workflows through technology-driven solutions. Our focus is on creating intelligent, scalable, and secure digital systems that streamline operations, enhance clinical decision-making, and improve patient outcomes. By combining deep industry expertise with innovative engineering, we empower healthcare organizations to modernize their processes and deliver more efficient, data-driven care.
       </p>
-
-      <p class="mt-4 text-gray-600 leading-relaxed text-justify">
-        Our scientific leadership, guided by the world’s foremost renal experts,
-        paired with proven operational excellence and consistently high recruitment
-        and retention rates, accelerates your path to approval and commercialization.
-        With regional expertise spanning 70 countries, we deliver globally relevant
-        insights that move renal science forward.
-      </p>
-
-      <a href="#" class="inline-flex items-center mt-6 text-[#F26122] font-semibold hover:underline">
+      <!-- <a href="#" class="inline-flex text-primary items-center mt-6 font-semibold">
         Discover renal expertise
         <span class="ml-2">→</span>
-      </a>
+      </a> -->
     </div>
 
     <!-- Right Image -->
@@ -275,8 +271,6 @@ header{
     </div>
   </div>
   <div class="max-w-7xl mx-auto px-6 lg:px-8 mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-       
-       <!-- Right Image -->
        <div class="flex justify-center">
            <img
            src="./assets/home-renal-resized.jpg"
@@ -294,28 +288,15 @@ header{
             </svg>
           </div>
           <h2 class="text-3xl font-semibold text-gray-800">
-            The World Leader in Renal Research
+            Our Vision
           </h2>
-    
-          <p class="mt-4 text-gray-600 leading-relaxed text-justify">
-            Partner with the global experts driving meaningful progress in kidney disease
-            treatment, clinical practice, and policy. With an extensive site network and
-            over 80 renal studies conducted across 50+ countries, Emerald Clinical is the
-            CRO of choice for renal innovation worldwide.
+          <p class="mt-4 text-gray-600 leading-relaxed text-md font-medium text-justify">
+            To be the most trusted healthcare BPO partner, delivering uncompromised compliance, exceptional quality, and unmatched customer satisfaction. We envision a future where healthcare organizations can rely on us to enhance operational efficiency, ensure regulatory adherence, and consistently provide superior service experiences through innovation, integrity, and a commitment to excellence.
           </p>
-    
-          <p class="mt-4 text-gray-600 leading-relaxed text-justify">
-            Our scientific leadership, guided by the world’s foremost renal experts,
-            paired with proven operational excellence and consistently high recruitment
-            and retention rates, accelerates your path to approval and commercialization.
-            With regional expertise spanning 70 countries, we deliver globally relevant
-            insights that move renal science forward.
-          </p>
-    
-          <a href="#" class="inline-flex items-center mt-6 text-[#F26122] font-semibold hover:underline">
+          <!-- <a href="#" class="inline-flex items-center mt-6 text-[#F26122] font-semibold hover:underline">
             Discover renal expertise
             <span class="ml-2">→</span>
-          </a>
+          </a> -->
         </div>
   </div>
    <div class="max-w-7xl mx-auto px-6 lg:px-8 mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -329,28 +310,15 @@ header{
         </svg>
       </div>
       <h2 class="text-3xl font-semibold text-gray-800">
-        The World Leader in Renal Research
+        Our Mission
       </h2>
-
-      <p class="mt-4 text-gray-600 leading-relaxed text-justify">
-        Partner with the global experts driving meaningful progress in kidney disease
-        treatment, clinical practice, and policy. With an extensive site network and
-        over 80 renal studies conducted across 50+ countries, Emerald Clinical is the
-        CRO of choice for renal innovation worldwide.
+      <p class="mt-4 text-gray-600 leading-relaxed text-md font-medium text-justify">
+       To empower healthcare organizations with secure, scalable, and intelligent solutions that deliver measurable outcomes while ensuring full regulatory compliance. We are committed to transforming complex healthcare operations into seamless, efficient workflows through advanced technology, deep domain expertise, and a dedication to continuous innovation. Our mission is to support providers, payers, and partners in achieving greater accuracy, enhanced productivity, and improved patient experiences—while upholding the highest standards of privacy, security, and ethical responsibility.
       </p>
-
-      <p class="mt-4 text-gray-600 leading-relaxed text-justify">
-        Our scientific leadership, guided by the world’s foremost renal experts,
-        paired with proven operational excellence and consistently high recruitment
-        and retention rates, accelerates your path to approval and commercialization.
-        With regional expertise spanning 70 countries, we deliver globally relevant
-        insights that move renal science forward.
-      </p>
-
-      <a href="#" class="inline-flex items-center mt-6 text-[#F26122] font-semibold hover:underline">
+      <!-- <a href="#" class="inline-flex text-primary items-center mt-6 font-semibold">
         Discover renal expertise
         <span class="ml-2">→</span>
-      </a>
+      </a> -->
     </div>
 
     <!-- Right Image -->
@@ -362,301 +330,300 @@ header{
       />
     </div>
   </div>
-  <div class="max-w-7xl mx-auto px-6 lg:px-8 mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-       <!-- Right Image -->
-       <div class="flex justify-center">
-           <img
-           src="./assets/home-renal-resized.jpg"
-           alt="Renal ultrasound imaging"
-           class="rounded-xl shadow-lg w-full object-cover"
-           />
-        </div>
-        <div>
-          <div class="mb-4">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0f748f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 11a5 5 0 0 1 5-5"></path>
-              <path d="M5 17a5 5 0 0 0 5-5v-2"></path>
-              <path d="M19 11a5 5 0 0 0-5-5"></path>
-              <path d="M19 17a5 5 0 0 1-5-5v-2"></path>
-            </svg>
-          </div>
-          <h2 class="text-3xl font-semibold text-gray-800">
-            The World Leader in Renal Research
-          </h2>
-    
-          <p class="mt-4 text-gray-600 leading-relaxed text-justify">
-            Partner with the global experts driving meaningful progress in kidney disease
-            treatment, clinical practice, and policy. With an extensive site network and
-            over 80 renal studies conducted across 50+ countries, Emerald Clinical is the
-            CRO of choice for renal innovation worldwide.
-          </p>
-    
-          <p class="mt-4 text-gray-600 leading-relaxed text-justify">
-            Our scientific leadership, guided by the world’s foremost renal experts,
-            paired with proven operational excellence and consistently high recruitment
-            and retention rates, accelerates your path to approval and commercialization.
-            With regional expertise spanning 70 countries, we deliver globally relevant
-            insights that move renal science forward.
-          </p>
-    
-          <a href="#" class="inline-flex items-center mt-6 text-[#F26122] font-semibold hover:underline">
-            Discover renal expertise
-            <span class="ml-2">→</span>
-          </a>
-        </div>
-  </div>
 </section>
-<section class="w-full py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-6">
-
-    <!-- Heading -->
-    <h2 class="text-3xl font-bold text-gray-900">
-      Your Partner at Every Phase
-    </h2>
-    <p class="mt-3 text-gray-600 max-w-3xl">
-      Our flexible clinical trial services cover both early-phase and late-phase studies. 
-      We adapt to your unique goals and challenges to deliver impact with unmatched efficiency.
-    </p>
-
-    <!-- Grid -->
+<!-- services -->
+<section class="bg-primary py-24">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="w-full text-center">
+      <h1 class="text-[1px] Saira md:text-[50px] font-bold text-white">
+      <span class="text-parimary">
+        Our
+      </span>
+      Services
+      </h1>
+      <p class="mt-4 text-lg Saira text-gray-300 font-semibold max-w-3xl mx-auto">
+        Your Trusted Partner in Powering Smarter Healthcare Solutions
+      </p>
+    </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
+  
+       <!-- Card -->
+       <div class="p-8 rounded-xl bg-gray-50 border border-gray-200">
+         <div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center">
+           <span class="text-white text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+            </svg>
 
-      <!-- Card -->
-      <div class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <div class="w-12 h-12 rounded-lg bg-green-200 flex items-center justify-center">
-          <span class="text-green-700 text-xl">📋</span>
-        </div>
-        <h3 class="mt-5 text-xl font-semibold text-gray-900">
-          Clinical Trial Management
-        </h3>
-        <p class="mt-3 text-gray-600">
-          Keep your trial on track with end-to-end clinical research services from study design 
-          and recruitment to endpoint adjudication and pharmacovigilance.
-        </p>
-        <button class="mt-5 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-sm flex items-center gap-2">
-          Find trial solutions →
-        </button>
-      </div>
+           </span>
+         </div>
+         <h3 class="mt-5 text-xl font-semibold text-primary">
+           Provider Outreach Services
+         </h3>
+         <p class="mt-3 text-secondary">
+           Zenexa Infotech delivers fast, secure, HIPAA-compliant medical record retrieval for healthcare, legal, and payer needs. From requests to delivery, our experts ensure accuracy, speed, and full compliance — giving you the critical data you need, on time, every time.
+         </p>
+        <a href="#" class="mt-5 px-4 py-2 font-semibold text-primary rounded-lg text-sm flex items-center">
+          Read More
+         </a>
+       </div>
+  
+       <!-- Card -->
+       <div class="p-8 rounded-xl bg-gray-50 border border-gray-200">
+         <div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center">
+           <span class="text-white text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+            </svg>
+           </span>
+         </div>
+         <h3 class="mt-5 text-xl font-semibold text-primary">
+           Data Entry & Document Indexing
+         </h3>
+       <p class="mt-3 text-secondary">
+         Zenexa Infotech transforms disorganized healthcare records into structured, searchable, and HIPAA-compliant data. We tag, index, and secure documents for fast, accurate access — ensuring compliance, traceability, and efficiency for providers, payers, and legal teams.
+         </p>
+         <a href="#" class="mt-5 px-4 py-2 font-semibold text-primary rounded-lg text-sm flex items-center">
+          Read More
+         </a>
+       </div>
+  
+       <!-- Card -->
+       <div class="p-8 rounded-xl bg-gray-50 border border-gray-200">
+         <div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center">
+           <span class="text-white text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
+            </svg>
+           </span>
+         </div>
+         <h3 class="mt-5 text-xl font-semibold text-primary">
+           Chart Abstraction & Risk Adjustment
+         </h3>
+       <p class="mt-3 text-secondary">
+          Zenexa Infotech delivers precise chart abstraction for Medicare Advantage, ACA, and commercial payers. Our certified experts ensure accurate HCC coding, risk adjustment, and compliance—boosting revenue integrity, patient stratification, and financial performance from day one.
+         </p>
+         <a href="#" class="mt-5 px-4 py-2 font-semibold text-primary rounded-lg text-sm flex items-center">
+          Read More
+         </a>
+       </div>
+  
+       <!-- Card -->
+       <div class="p-8 rounded-xl bg-gray-50 border border-gray-200">
+         <div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center">
+           <span class="text-white text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5" />
+            </svg>
+           </span>
+         </div>
+         <h3 class="mt-5 text-xl font-semibold text-primary">
+            Claims Management & Coding Support
+         </h3>
+       <p class="mt-3 text-secondary">
+          Zenexa Infotech delivers precise medical coding and end-to-end claims processing to maximize reimbursements. Our certified coders ensure accuracy, compliance, and faster payments — reducing denials, boosting cash flow, and accelerating your revenue cycle with scalable, specialty-specific solutions
+         </p>
+        <a href="#" class="mt-5 px-4 py-2 font-semibold text-primary rounded-lg text-sm flex items-center">
+          Read More
+         </a>
+       </div>
 
-      <!-- Card -->
-      <div class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <div class="w-12 h-12 rounded-lg bg-green-200 flex items-center justify-center">
-          <span class="text-green-700 text-xl">🔒</span>
-        </div>
-        <h3 class="mt-5 text-xl font-semibold text-gray-900">
-          Regulatory Consulting
-        </h3>
-        <p class="mt-3 text-gray-600">
-          Navigate distinct and complex regulatory landscapes with confidence and tailored strategies 
-          to ensure compliance from start-up to safety reporting.
-        </p>
-        <button class="mt-5 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-sm flex items-center gap-2">
-          Get global support →
-        </button>
-      </div>
-
-      <!-- Card -->
-      <div class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <div class="w-12 h-12 rounded-lg bg-green-200 flex items-center justify-center">
-          <span class="text-green-700 text-xl">✏️</span>
-        </div>
-        <h3 class="mt-5 text-xl font-semibold text-gray-900">
-          Medical Writing
-        </h3>
-        <p class="mt-3 text-gray-600">
-          Drive efficient approvals with accurate documentation from protocol development to statistical 
-          reports and regulatory submission.
-        </p>
-        <button class="mt-5 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-sm flex items-center gap-2">
-          Get expert medical writing →
-        </button>
-      </div>
-
-      <!-- Card -->
-      <div class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <div class="w-12 h-12 rounded-lg bg-green-200 flex items-center justify-center">
-          <span class="text-green-700 text-xl">💾</span>
-        </div>
-        <h3 class="mt-5 text-xl font-semibold text-gray-900">
-          Data Management & Biostatistics
-        </h3>
-        <p class="mt-3 text-gray-600">
-          Streamline your study with secure, integrated data management solutions and expert 
-          biostatistics services for maximum insights and impact.
-        </p>
-        <button class="mt-5 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg text-sm flex items-center gap-2">
-          Discover data solutions →
-        </button>
-      </div>
-
-    </div>
+         <div class="p-8 rounded-xl bg-gray-50 border border-gray-200">
+         <div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center">
+           <span class="text-white text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+            </svg>
+           </span>
+         </div>
+         <h3 class="mt-5 text-xl font-semibold text-primary">
+            Eligibility & Benefits Verification
+         </h3>
+       <p class="mt-3 text-secondary">
+         Zenexa Infotech delivers real-time insurance verification to prevent claim denials, cut billing delays, and boost patient satisfaction. Our specialists confirm coverage details before services, ensuring accuracy, compliance, and faster, cleaner claims — tailored to your practice needs.
+         </p>
+        <a href="#" class="mt-5 px-4 py-2 font-semibold text-primary rounded-lg text-sm flex items-center">
+          Read More
+         </a>
+       </div>
+       <!-- Card -->
+       <div class="p-8 rounded-xl bg-gray-50 border border-gray-200">
+         <div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center">
+           <span class="text-white text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122" />
+            </svg>
+          </span>
+         </div>
+         <h3 class="mt-5 text-xl font-semibold text-primary">
+            Medical Record Retrieval & Management
+         </h3>
+       <p class="mt-3 text-secondary">
+          Zenexa Infotech delivers fast, secure, and fully compliant medical record retrieval for healthcare payers, legal firms, and providers. From request to delivery, our experts ensure accuracy, high response rates, and HIPAA compliance — empowering you with reliable data, on time, every time.
+         </p>
+         <a href="#" class="mt-5 px-4 py-2 font-semibold text-primary rounded-lg text-sm flex items-center">
+          Read More
+         </a>
+       </div>
+     </div>
   </div>
 </section>
+ <!-- tagline -->
+<section class="bg-white Saira py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+    <h1 class="text-[50px] text-primary md:text-[50px] mb-32 mt-16 font-bold">
+     Trusted Expertise and Technology that Advance Your Healthcare Journey to the Next Level.
+    </h1>
+    <div class="grid grid-cols-1 gap-10 mt-12">
+      <!-- Card -->
+      <div class="p-8 rounded-xl bg-gray-50 border flex flex-wrap border-gray-200">
+        <div class="w-12 flex h-12 rounded-lg bg-primary flex items-center justify-center">
+          <span class="text-white text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+            </svg>
+          </span>
+        </div>
+        <span class="flex px-4 py-2 text-xl font-semibold text-gray-900">
+          100% HIPAA-Compliant Infrastructure
+        </span>
+      </div>
+       <div class="p-8 rounded-xl bg-gray-50 border flex flex-wrap border-gray-200">
+        <div class="w-12 flex h-12 rounded-lg bg-primary flex items-center justify-center">
+            <span class="text-white text-xl">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+              </svg>
+          </span>
+        </div>
+        <span class="flex px-4 py-2 text-xl font-semibold text-gray-900">
+          Scalable solutions for organizations of all sizes
+        </span>
+      </div>
 
-<section class="w-full py-20 bg-white">
-  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+       <div class="p-8 rounded-xl bg-gray-50 border flex flex-wrap border-gray-200">
+        <div class="w-12 flex h-12 rounded-lg bg-primary flex items-center justify-center">
+          <span class="text-white text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+            </svg>
+        </span>
+        </div>
+        <span class="flex px-4 py-2 text-xl font-semibold text-gray-900"> 
+          ReportsRobust data privacy, encryption, and audit trails
+        </span>
+      </div>
 
-    <!-- Image -->
-    <div>
-      <img 
-        src="your-image-here.jpg"
-        class="rounded-xl w-full object-cover"
-        alt="Scientist"
-      />
-    </div>
+      <div class="p-8 rounded-xl bg-gray-50 border flex flex-wrap border-gray-200">
+        <div class="w-12 flex h-12 rounded-lg bg-primary flex items-center justify-center">
+          <span class="text-white text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+          </svg>
+        </span>
+        </div>
+        <span class="flex px-4 py-2 text-xl font-semibold text-gray-900">
+          Global delivery capabilities with U.S. client support
+        </span>
+      </div>
 
-    <!-- Text Content -->
-    <div>
-      <h2 class="text-3xl font-bold text-gray-900 leading-tight">
-        Agile Services Backed by <br /> Broad Expertise
-      </h2>
+      <div class="p-8 rounded-xl bg-gray-50 border flex flex-wrap border-gray-200">
+        <div class="w-12 flex h-12 rounded-lg bg-primary flex items-center justify-center">
+          <span class="text-white text-xl">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
 
-      <p class="mt-4 text-gray-600">
-        From renal and cardiometabolic disease to oncology and beyond,
-        our comprehensive clinical trial services are backed by
-        industry-leading knowledge and a proven track record across
-        diverse therapeutic areas.
-      </p>
-
-      <div class="mt-6 flex gap-4">
-        <button class="px-5 py-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-md text-sm">
-          Our areas of expertise
-        </button>
-
-        <button class="px-5 py-2.5 border border-orange-400 text-orange-500 hover:bg-orange-50 rounded-md text-sm">
-          Meet our team
-        </button>
+          </span>
+        </div>
+        <span class="flex px-4 py-2 text-xl font-semibold text-gray-900">
+          Certified HIM professionals & experienced QA teams
+        </span>
       </div>
     </div>
-
   </div>
+
 </section>
-
-
 <!-- Section 2: Green Banner -->
-<section class="w-full py-20 px-6">
-  <div class="max-w-6xl mx-auto bg-green-400 rounded-xl px-10 py-16 grid grid-cols-1 md:grid-cols-3 items-center">
-
-    <!-- Text -->
-    <div class="md:col-span-2">
-      <h3 class="text-2xl font-bold text-[#00334e]">
-        Don’t see what you’re looking for?
-      </h3>
-      <p class="mt-3 text-[#00334e] opacity-80">
-        Let’s find the right solution together.
-      </p>
-
-      <button class="mt-6 px-5 py-2.5 bg-orange-500 hover:bg-orange-600 text-white rounded-md text-sm">
-        Get in touch
-      </button>
-    </div>
-
-    <!-- Circle Image -->
-    <div class="flex justify-center mt-10 md:mt-0">
-      <img 
-        src="your-person-image.jpg"
-        class="w-40 h-40 rounded-full object-cover"
-        alt="Person"
-      />
-    </div>
-
-  </div>
-</section>
-
-
-
-<footer class="bg-[#052B36] text-white py-16">
-  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 grid-cols-6 gap-12">
-
-    <!-- Column 1: Logo + Description -->
-    <div class="col-span-2">
-      <div class="flex items-center space-x-3 mb-4">
-        <img src="./assets/ec-logo-white.svg" class="h-20" alt="Emerald Logo">
-        <!-- <div>
-          <p class="text-lg font-bold tracking-wide">EMERALD</p>
-          <p class="text-xs tracking-wide">CLINICAL TRIALS</p>
-        </div> -->
+<section class="w-full bg-gradient-to-t from-gray-100 to-white Saira pb-20">
+  <div class="max-w-7xl px-8 mx-auto">
+    <div class="w-full bg-gradient-to-tr from-[#004b5b] to-[#0a816f] rounded-xl px-10 py-16 grid grid-cols-1 md:grid-cols-3 items-center">
+      <!-- Text -->
+      <div class="md:col-span-2">
+        <h3 class="text-2xl mb-10 font-bold text-white">
+        Get All The Tools You Need In a Single Platform
+        </h3>
+        <a href="contactus.html" class="mt-6 px-5 py-2.5 bg-white hover:bg-gray-200  font-semibold text-primary rounded-md text-sm">
+          Contact Us
+        </a>
       </div>
 
-      <p class="text-gray-300 mb-4">
-        Driven by passion and diversity, we offer tailored solutions to make your vision a reality.
-      </p>
-
-      <p class="text-gray-300 mb-6">
-        With 20+ years of global CRO experience we're dedicated to excellence.
-      </p>
-
-      <button class="px-5 py-2 bg-[#F46A47] text-white rounded-md hover:bg-[#e05c3c] transition">
-        Contact us
-      </button>
+      <!-- Circle Image -->
+      <div class="flex justify-center mt-10 md:mt-0">
+        <img 
+          src="./assets/doc.png"
+          class="w-40 h-40 rounded-md object-cover float-animation" style="animation-delay:0.5s"
+          alt="Person"
+        />
+      </div>
     </div>
-
-    <!-- Column 2: Services -->
+  </div>
+</section>
+<button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="fixed bottom-6 w-12 h-12 font-semibold right-6 bg-secondary hover:bg-gray-300 text-white hover:text-green-900 p-3 rounded-md shadow-lg transition float-animation" style="animation-delay:0.5s">↑</button>
+<footer class="px-10 pt-16 bg-primary Saira">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
     <div>
-      <h3 class="font-semibold mb-4">Services & Capabilities</h3>
-      <ul class="space-y-2 text-gray-300 text-sm">
-        <li>Early Phase Studies</li>
-        <li>Patient Recruitment</li>
-        <li>Clinical Trial Monitoring</li>
-        <li>Regulatory Consulting</li>
-        <li>Medical Writing</li>
-        <li>Data Management & Biostatistics</li>
+      <img src="./assets/logo_white.png" alt="Company Logo" class="w-28" />
+      <h3 class="font-semibold mb-3 text-xl text-teal-400">Contact Us</h3>
+      <ul class="space-y-2 text-gray-300">
+      <li>info@zenexainfotech.com </li>
+      <li>+1 832 735 7799</li>
       </ul>
     </div>
-
-    <!-- Column 3: Therapeutic Expertise -->
+    <!-- Services -->
     <div>
-      <h3 class="font-semibold mb-4">Therapeutic Expertise</h3>
-      <ul class="space-y-2 text-gray-300 text-sm">
-        <li>Renal</li>
-        <li>Cardiovascular & Metabolic Disease</li>
-        <li>Oncology</li>
+      <h3 class="font-semibold mb-3 text-xl text-teal-400">Services</h3>
+      <ul class="space-y-2 text-gray-300">
+      <li>Provider Outreach Services</li>
+      <li>Data Entry & Document Indexing</li>
+      <li>Chart Abstraction & Risk Adjustment</li>
+      <li>Claims Management & Coding Support</li>
+      <li>Eligibility & Benefits Verification</li>
+      <li>Medical Record Retrieval & Management</li>
       </ul>
     </div>
-
-    <!-- Column 4: About -->
+    <!-- Expertise + Location -->
     <div>
-      <h3 class="font-semibold mb-4">About us</h3>
-      <ul class="space-y-2 text-gray-300 text-sm">
-        <li>About Us</li>
-        <li>Meet the Team</li>
-        <li>Careers</li>
-        <li>Scientific Spotlights</li>
+      <h3 class="font-semibold mb-3 text-xl text-teal-400">Locations</h3>
+      <h4 class="font-semibold mt-2 text-teal-400">Zenexa, USA (HQ)</h4>
+      <ul class="space-y-2 text-gray-300">
+      <li> New York, USA</li>
+      </ul>
+      <h4 class="font-semibold mt-2 text-teal-400">Zenexa, India</h4>
+      <ul class="space-y-2 text-gray-300">
+      <li>Unit 401, 4th floor, IT Tower 2 , Infocity,
+      Gandhinagar, Gujarat.</li>
+      </ul>
+      <h4 class="font-semibold mt-2 text-teal-400">Zenexa, Canada</h4>
+      <ul class="space-y-2 text-gray-300">
+      <li>Waterloo, Ontario.</li>
       </ul>
     </div>
-
-    <!-- Column 5: Legal -->
+    <!-- Legal -->
     <div>
-      <h3 class="font-semibold mb-4">Legal</h3>
-      <ul class="space-y-2 text-gray-300 text-sm">
-        <li>Privacy Policy</li>
-        <li>Consumer Health Information Privacy Notice – US</li>
-        <li>Emerald Clinical HCP & Patient Privacy Notice</li>
-        <li>Job Applicant, Contractor, Employee Privacy Notice</li>
-        <li>Modern Day Slavery & Human Trafficking Statement</li>
-        <li>GDPR Compliance Statement</li>
+      <h3 class="font-semibold mb-3 text-teal-400 text-xl">Quick Access</h3>
+      <ul class="space-y-2 mb-6 text-gray-300">
+      <li>Terms & Conditions</li>
+      <li>Privacy Policy</li>
+      <li>Compliance Statement</li>
+      <li>Legal Disclaimers</li>
+      <li><a href="http://careers.zenexainfotech.com">Careers</a></li>
       </ul>
     </div>
   </div>
-
-  <!-- Divider -->
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="border-t border-gray-600/40 my-10"></div>
-  </div>
-
-  <!-- Social + Bottom Text -->
-  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
-
-    <p>© 2025 Emerald Clinical Trials. All rights reserved.</p>
-
-    <div class="flex space-x-6 mt-4 md:mt-0 text-xl opacity-80">
-      <i class="fa-solid fa-xmark"></i>
-      <i class="fa-brands fa-linkedin"></i>
-      <i class="fa-brands fa-facebook"></i>
-      <i class="fa-brands fa-weixin"></i>
-    </div>
+  <div class="border-t border-green-700 mt-12 py-10 text-center text-gray-400">
+  © 2025 Zenexa Infotech. All rights reserved.
   </div>
 </footer>
-
 </body>
 </html>
