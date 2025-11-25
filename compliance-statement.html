@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compliance Statement | Zenexa Infotech</title>
+<link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
+<!-- <script src="./../assets/js/tailwind.min.js"></script> -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="./assets/lib/aos/dist/aos.css" rel="stylesheet">
+<script src="./assets/lib/aos/dist/aos.js"></script>
+<script>
+  window.onload = function()
+  {
+  AOS.init();
+  }
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: "#004b5b",
+          secondary: "#0a816f",
+        },
+        fontFamily: {
+          inter: ["Inter", "sans-serif"],
+        }
+      }
+    }
+  }
+    $(function(){
+  $("#header").load("./../header.html"); 
+  $("#footer").load("./../footer.html"); 
+});
+</script>
+<style> 
+.Saira {
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+#services:hover .services-box {
+  display:block !important;
+}
+#aboutus:hover .aboutus-box {
+  display:block !important;
+}
+#insights:hover .insights-box {
+  display:block !important;
+}
+header{
+  z-index: 10000!important;
+}
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+  .float-animation { animation: float 5s ease-in-out infinite; }
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { animation: fadeUp 1s ease-out forwards; }
+</style>
+</head>
+<body class="">
+<div class="sticky top-0" id="header"></div>
+<section class="py-24">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <h1 data-aos="fade-up" class="text-[40px] md:text-[50px] font-bold text-secondary">
+      <span class="text-primary Saira">
+       HIPPA Compliance
+      </span>
+        Statement
+      </h1>
+      <p class="mt-3 text-lg font-medium text-justify text-secondary">
+      At Zenexa Infotech Pvt Ltd, we are committed to safeguarding the privacy, security, and integrity of Protected Health Information (PHI) in accordance with the Health Insurance Portability and Accountability Act of 1996 (HIPAA) and applicable regulations.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 gap-10 mt-12">
+        <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
+          <h3 class="mt-5 text-2xl font-bold text-primary">  
+            Our Commitment to HIPAA Compliancet
+          </h3>
+          <p class="mt-3 text-lg font-medium text-justify text-secondary">
+            <b>Privacy Rule:</b> We limit the collection, use, and disclosure of PHI to what is permitted under HIPAA and only for authorized purposes such as healthcare coordination, insurance claims, or legal proceedings.
+            <br>
+            <br>
+            <b>Security Rule:</b> We employ administrative, physical, and technical safeguards â€” including encryption, access controls, audit trails, and secure transmission protocols â€” to protect PHI from unauthorized access, alteration, or loss.
+            <br>
+            <br>
+            <b>Breach Notification Rule:</b> In the unlikely event of a data breach involving PHI, we will promptly investigate, mitigate risks, and provide required notifications in compliance with HIPAA guidelines.
+            <br>
+            <br>
+           <b> Business Associate Agreements (BAAs):</b> Zenexa enters into BAAs with covered entities (healthcare providers, insurers, law firms, etc.) to ensure compliance with HIPAA obligations.
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 gap-10 mt-12">
+        <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
+          <h3 class="mt-5 text-2xl font-bold text-primary">  
+            Safeguards in Place
+          </h3>
+          <p class="mt-3 text-lg font-medium text-justify text-secondary">
+            <b>Encryption:</b> All PHI is encrypted at rest and in transit.<br><br>
+            <b>Access Control:</b> PHI access is role-based and restricted to authorized personnel only.<br><br>
+            <b>Training:</b> Employees handling PHI undergo regular HIPAA and data protection training.<br><br>
+            <b>Monitoring:</b> System activity is logged and monitored to detect and prevent unauthorized access.<br><br>
+            <b>Data Minimization:</b> We collect and process only the minimum necessary PHI to fulfill service requests.
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 gap-10 mt-12">
+        <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
+          <h3 class="mt-5 text-2xl font-bold text-primary">  
+            Your Rights Under HIPAA
+          </h3>
+          <p class="mt-3 text-lg font-medium text-justify text-secondary">
+           Individuals whose PHI we handle retain rights under HIPAA, including the right to:
+          </p>
+          <p class="mt-3 text-lg font-medium text-justify text-secondary">
+            Access and obtain a copy of their health information
+            Request corrections to inaccurate or incomplete records
+            Request restrictions on certain uses or disclosures of their PHI
+            File a complaint if they believe their rights under HIPAA have been violated
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 gap-10 mt-12">
+        <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
+          <h3 class="mt-5 text-2xl font-bold text-primary">  
+            Questions or Concerns
+          </h3>
+          <p class="mt-3 text-lg font-medium text-justify text-secondary">
+          If you have questions about our HIPAA compliance practices or need further information, please contact our HIPAA Compliance Officer at: Zenexa Infotech Pvt Ltd
+          <br><br>
+          compliance@zenexainfotech.com
+          </p>
+        </div>
+      </div>
+  </div>
+</section>
+<div id="footer"></div>
+</body>
+</html>
