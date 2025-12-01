@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic Check</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .check {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #ccc;
+        }
+        .check.success {
+            border-left-color: #4caf50;
+            background: #f1f8f4;
+        }
+        .check.error {
+            border-left-color: #f44336;
+            background: #fef1f0;
+        }
+        .check.warning {
+            border-left-color: #ff9800;
+            background: #fff8f0;
+        }
+        h1 { color: #333; }
+        code {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Website Diagnostic Check</h1>
+    
+    <div id="protocol-check" class="check">
+        <strong>Protocol Check:</strong> <span id="protocol-result">Checking...</span>
+    </div>
+    
+    <div id="jquery-check" class="check">
+        <strong>jQuery Check:</strong> <span id="jquery-result">Checking...</span>
+    </div>
+    
+    <div id="files-check" class="check">
+        <strong>Files Check:</strong> <span id="files-result">Checking...</span>
+    </div>
+    
+    <div id="recommendation" style="margin-top: 30px; padding: 20px; background: #e3f2fd; border-radius: 8px; display: none;">
+        <h2>💡 Recommendation</h2>
+        <p id="recommendation-text"></p>
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            // Check 1: Protocol
+            const protocol = window.location.protocol;
+            const protocolDiv = $('#protocol-check');
+            const protocolResult = $('#protocol-result');
+            
+            if (protocol === 'file:') {
+                protocolDiv.addClass('error');
+                protocolResult.html('❌ Running from <code>file://</code> - jQuery .load() will NOT work!');
+                $('#recommendation').show();
+                $('#recommendation-text').html(`
+                    <strong>Problem:</strong> You're opening the HTML file directly from your file system.<br><br>
+                    <strong>Solution:</strong> You need to run a local web server. Here are 3 easy ways:<br><br>
+                    <strong>Option 1 - Python (if installed):</strong><br>
+                    <code>python -m http.server 8000</code><br>
+                    Then open: <code>http://localhost:8000</code><br><br>
+                    <strong>Option 2 - PHP (if installed):</strong><br>
+                    <code>php -S localhost:8000</code><br>
+                    Then open: <code>http://localhost:8000</code><br><br>
+                    <strong>Option 3 - VS Code Extension:</strong><br>
+                    Install "Live Server" extension and click "Go Live"
+                `);
+            } else if (protocol === 'http:' || protocol === 'https:') {
+                protocolDiv.addClass('success');
+                protocolResult.html('✅ Running from <code>' + protocol + '</code> - Good!');
+            } else {
+                protocolDiv.addClass('warning');
+                protocolResult.html('⚠️ Unknown protocol: <code>' + protocol + '</code>');
+            }
+            
+            // Check 2: jQuery
+            const jqueryDiv = $('#jquery-check');
+            const jqueryResult = $('#jquery-result');
+            
+            if (typeof jQuery !== 'undefined') {
+                jqueryDiv.addClass('success');
+                jqueryResult.html('✅ jQuery ' + jQuery.fn.jquery + ' loaded successfully');
+            } else {
+                jqueryDiv.addClass('error');
+                jqueryResult.html('❌ jQuery not loaded');
+            }
+            
+            // Check 3: Try to load a component
+            const filesDiv = $('#files-check');
+            const filesResult = $('#files-result');
+            
+            $.ajax({
+                url: './header.html',
+                type: 'HEAD',
+                success: function() {
+                    filesDiv.addClass('success');
+                    filesResult.html('✅ Can access component files');
+                },
+                error: function(xhr) {
+                    filesDiv.addClass('error');
+                    filesResult.html('❌ Cannot access component files - Error: ' + xhr.status);
+                    if (!$('#recommendation').is(':visible')) {
+                        $('#recommendation').show();
+                        $('#recommendation-text').html(`
+                            <strong>Problem:</strong> Cannot load component files.<br><br>
+                            <strong>Possible causes:</strong><br>
+                            1. Files are in wrong location<br>
+                            2. CORS restrictions (if using file://)<br>
+                            3. Server not running properly<br><br>
+                            <strong>Solution:</strong> Make sure you're running a local web server (see above).
+                        `);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,147 +1,463 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Zenexa Infotech</title>
-<link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
-<!-- <script src="./../assets/js/tailwind.min.js"></script> -->
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="./assets/lib/aos/dist/aos.css" rel="stylesheet">
-<script src="./assets/lib/aos/dist/aos.js"></script>
-<script>
-  window.onload = function()
-  {
-  AOS.init();
-  }
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: "#004b5b",
-          secondary: "#0a816f",
-        },
-        fontFamily: {
-          inter: ["Inter", "sans-serif"],
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Zenexa Infotech</title>
+  
+  <!-- Dark Mode Script -->
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="./assets/lib/aos/dist/aos.css" rel="stylesheet">
+  <script src="./assets/lib/aos/dist/aos.js"></script>
+  
+  <!-- Enhanced Features -->
+  <script src="./assets/js/enhanced-features.js" defer></script>
+
+  <script>
+    window.onload = function () {
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 50,
+        easing: 'ease-out-cubic'
+      });
+
+      window.addEventListener('scroll', () => {
+        const headerBg = document.getElementById('header-bg');
+        if (headerBg) {
+          if (window.scrollY > 20) {
+            headerBg.classList.add('bg-white/90', 'shadow-md');
+            headerBg.classList.remove('bg-white/70');
+          } else {
+            headerBg.classList.remove('bg-white/90', 'shadow-md');
+            headerBg.classList.add('bg-white/70');
+          }
+        }
+      });
+    }
+
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
+          },
+          colors: {
+            primary: "#0f766e",
+            secondary: "#0d9488",
+            accent: "#06b6d4",
+            dark: "#0f172a",
+          },
+          animation: {
+            'blob': 'blob 7s infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-glow': 'pulse-glow 3s infinite',
+            'marker-pulse': 'marker-pulse 2s infinite',
+          },
+          keyframes: {
+            blob: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+              '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+              '100%': { transform: 'translate(0px, 0px) scale(1)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            'pulse-glow': {
+              '0%, 100%': { opacity: 1, transform: 'scale(1)' },
+              '50%': { opacity: 0.8, transform: 'scale(1.05)' },
+            },
+            'marker-pulse': {
+              '0%': { boxShadow: '0 0 0 0 rgba(20, 184, 166, 0.7)' },
+              '70%': { boxShadow: '0 0 0 15px rgba(20, 184, 166, 0)' },
+              '100%': { boxShadow: '0 0 0 0 rgba(20, 184, 166, 0)' }
+            },
+            shimmer: {
+              '100%': { transform: 'translateX(100%)' }
+            }
+          }
         }
       }
     }
-  }
-    $(function(){
-  $("#header").load("./../header.html"); 
-  $("#footer").load("./../footer.html"); 
-});
-</script>
-<style> 
-.Saira {
-  font-family: "Saira", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-#services:hover .services-box {
-  display:block !important;
-}
-#aboutus:hover .aboutus-box {
-  display:block !important;
-}
-#insights:hover .insights-box {
-  display:block !important;
-}
-header{
-  z-index: 10000!important;
-}
-  @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
-  }
-  .float-animation { animation: float 5s ease-in-out infinite; }
-  @keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  .fade-up { animation: fadeUp 1s ease-out forwards; }
-</style>
+
+    $(function () {
+      $("#header").load("./header.html");
+      $("#footer").load("./footer-ultimate.html");
+      $("#live-chat").load("./components/live-chat-widget.html");
+      $("#newsletter").load("./components/newsletter-popup.html");
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #0f766e 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Map Styles */
+    .map-container {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg');
+      background-size: cover;
+      background-position: center;
+      background-color: #0f172a;
+      /* Slate 900 */
+      /* Filter to make it look dark/techy */
+      filter: grayscale(100%) invert(100%) brightness(0.7) contrast(1.2);
+    }
+
+    /* Since we inverted the container, we need to re-invert content or handle colors carefully. 
+       Actually, a better approach for a "tech" map is a dark SVG. 
+       Let's use a CSS radial gradient overlay instead of complex filters on the image itself 
+       to ensure markers pop. */
+
+    .tech-map-bg {
+      background-color: #0f172a;
+      background-image:
+        radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 1) 100%),
+        url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .map-marker {
+      position: absolute;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .map-marker:hover {
+      transform: scale(1.2) translateY(-5px);
+      z-index: 50;
+    }
+
+    .map-tooltip {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      transform: translateY(10px);
+    }
+
+    .map-marker:hover .map-tooltip {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  </style>
 </head>
-<body class="">
-<div class="sticky top-0" id="header"></div>
-<!-- hero section -->
-<section class="" style="background:url('./../assets/service.jpg');background-position:center;background-size:contain;background-attachment: fixed">
-  <div class="w-full px-6 bg-white/80 py-40">
-    <div class="max-w-7xl mx-auto">
-      <div class="max-w-7xl grid grid-cols-1  flex items-center justify-between">
-        <div class="absolute top-16 left-16 w-20 h-20 bg-teal-500/15 rounded-full blur-2xl float-animation"></div>
-        <div class="absolute top-40 right-20 w-28 h-28 bg-orange-500/15 rounded-full blur-2xl float-animation" style="animation-delay:1s"></div>
-        <!-- Glow Center -->
-        <div class="absolute inset-0 flex justify-center pointer-events-none">
-          <div class="w-[450px] h-[450px] bg-teal-300/20 blur-[130px] rounded-full"></div>
+
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden selection:bg-teal-200 selection:text-teal-900">
+
+  <!-- Header Placeholder -->
+  <div id="header"></div>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 overflow-hidden bg-slate-900 min-h-[60vh] flex items-center">
+    <div class="absolute inset-0 bg-slate-900 z-0">
+      <div
+        class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMTUsIDExOCwgMTEwLCAwLjEpIi8+PC9zdmc+')] [mask-image:linear-gradient(to_bottom,white,transparent)]">
+      </div>
+      <div
+        class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-teal-500/20 rounded-full blur-[120px] animate-blob">
+      </div>
+      <div
+        class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-cyan-500/20 rounded-full blur-[120px] animate-blob animation-delay-2000">
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+      <div class="text-center max-w-4xl mx-auto">
+        <div data-aos="fade-down"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 text-sm font-bold mb-8">
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-teal-500"></span>
+          </span>
+          We're Here to Help
         </div>
-        <div class="w-full">
-          <h2 class="md:text-[80px] Saira text-[40px] uppercase font-black text-secondary text-center leading-tight mb-6">
-        <span class="text-primary">
-          Contact
-        </span>
-        Us
-        </h2>
-        <p class="text-lg Saira text-secondary font-semibold max-w-3xl text-center mx-auto">
-          Your Trusted Partner in Powering Smarter Healthcare Solutions
+
+        <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight leading-tight">
+          Let's Start a <br>
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-500 animate-pulse-glow">Conversation</span>
+        </h1>
+
+        <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          Whether you have a question about our services, pricing, or just want to say hello, our team is ready to
+          answer all your questions.
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="relative py-20 -mt-20 z-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-8">
+
+        <!-- Contact Info (Left) -->
+        <div class="lg:col-span-4 space-y-6">
+          <div data-aos="fade-right"
+            class="glass-card rounded-3xl p-8 text-slate-800 h-full relative overflow-hidden group">
+            <div
+              class="absolute top-0 right-0 w-32 h-32 bg-teal-100/50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 group-hover:bg-teal-200/50 transition-colors duration-500">
+            </div>
+
+            <h3 class="text-2xl font-bold mb-8 relative z-10">Contact Information</h3>
+
+            <div class="space-y-8 relative z-10">
+              <div class="flex items-start gap-4 group/item">
+                <div
+                  class="w-12 h-12 rounded-xl bg-teal-50 text-teal-600 flex items-center justify-center shrink-0 group-hover/item:bg-teal-600 group-hover/item:text-white transition-colors duration-300">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm text-slate-500 font-semibold mb-1">Email Us</p>
+                  <a href="mailto:info@zenexainfotech.com"
+                    class="text-lg font-bold text-slate-900 hover:text-teal-600 transition-colors">info@zenexainfotech.com</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 group/item">
+                <div
+                  class="w-12 h-12 rounded-xl bg-cyan-50 text-cyan-600 flex items-center justify-center shrink-0 group-hover/item:bg-cyan-600 group-hover/item:text-white transition-colors duration-300">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm text-slate-500 font-semibold mb-1">Call Us</p>
+                  <a href="tel:+18327357799"
+                    class="text-lg font-bold text-slate-900 hover:text-teal-600 transition-colors">+1 832 735 7799</a>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 group/item">
+                <div
+                  class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover/item:bg-blue-600 group-hover/item:text-white transition-colors duration-300">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm text-slate-500 font-semibold mb-1">Our Locations</p>
+                  <ul class="space-y-1 text-slate-900 font-medium">
+                    <li>Texas, USA</li>
+                    <li>Gandhinagar, Gujarat</li>
+                    <li>Waterloo, Canada</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="mt-12 pt-8 border-t border-slate-200 relative z-10">
+              <p class="text-sm text-slate-500 font-semibold mb-4">Follow Us</p>
+              <div class="flex gap-4">
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-teal-600 hover:text-white transition-all duration-300 hover:scale-110">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                  </svg>
+                </a>
+                <a href="#"
+                  class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition-all duration-300 hover:scale-110">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form (Right) -->
+        <div class="lg:col-span-8">
+          <div data-aos="fade-left" class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden min-h-[700px]">
+            <!-- Decorative Elements -->
+            <div
+              class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-teal-400/20 to-cyan-300/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none">
+            </div>
+            <div
+              class="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-blue-400/20 to-purple-300/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none">
+            </div>
+
+            <h2 class="text-3xl font-bold text-slate-900 mb-2 relative z-10">Send us a Message</h2>
+            <p class="text-slate-500 mb-8 relative z-10">Fill out the form below and we'll get back to you within 24
+              hours.</p>
+
+            <!-- Tally Embed -->
+            <div class="relative z-10">
+              <iframe
+                data-tally-src="https://tally.so/embed/J91djJ?alignLeft=1&hideTitle=1&transparentBackground=0&dynamicHeight=1"
+                loading="lazy" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0"
+                title="Contact Form"
+                style="background: white; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+              </iframe>
+            </div>
+
+            <script>
+              var d = document, w = "https://tally.so/widgets/embed.js", v = function () { "undefined" != typeof Tally ? Tally.loadEmbeds() : d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function (e) { e.src = e.dataset.tallySrc })) }; if ("undefined" != typeof Tally) v(); else if (d.querySelector('script[src="' + w + '"]') == null) { var s = d.createElement("script"); s.src = w, s.onload = v, s.onerror = v, d.body.appendChild(s); }
+            </script>
+          </div>
+
+          <!-- Interactive 3D Map Section -->
+          <div data-aos="fade-up"
+            class="mt-8 glass-card rounded-3xl p-1 h-[500px] relative overflow-hidden bg-slate-900 shadow-2xl">
+            <div class="absolute inset-0 tech-map-bg opacity-80"></div>
+
+            <!-- Overlay Gradient for Depth -->
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-slate-900 opacity-60 pointer-events-none">
+            </div>
+
+            <!-- Title -->
+            <div class="absolute top-6 left-6 z-20">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/20 border border-teal-500/30 backdrop-blur-md text-teal-300 text-xs font-bold uppercase tracking-wider">
+                <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span> Global Presence
+              </div>
+            </div>
+
+            <!-- USA Marker (Texas) ~ Top: 38%, Left: 22% -->
+            <div class="map-marker" style="top: 38%; left: 22%;"
+              onclick="window.open('https://www.google.com/maps/search/Texas,+USA', '_blank')">
+              <div class="relative w-6 h-6">
+                <div class="absolute inset-0 bg-teal-500 rounded-full animate-marker-pulse"></div>
+                <div class="absolute inset-1 bg-white rounded-full shadow-lg flex items-center justify-center">
+                  <img src="./assets/img/icon.ico" class="w-3 h-3 object-contain" alt="Logo">
+                </div>
+              </div>
+              <!-- Tooltip -->
+              <div
+                class="map-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-48 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl p-3 shadow-2xl text-center">
+                <h4 class="text-white font-bold text-sm">Zenexa USA</h4>
+                <p class="text-teal-300 text-xs mb-2">Texas, United States</p>
+                <span
+                  class="inline-block px-2 py-1 bg-teal-500 text-white text-[10px] font-bold rounded hover:bg-teal-600 transition-colors">Get
+                  Directions &rarr;</span>
+                <!-- Arrow -->
+                <div
+                  class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white/20">
+                </div>
+              </div>
+            </div>
+
+            <!-- Canada Marker (Waterloo) ~ Top: 32%, Left: 26% -->
+            <div class="map-marker" style="top: 32%; left: 26%;"
+              onclick="window.open('https://www.google.com/maps/search/Waterloo,+Ontario,+Canada', '_blank')">
+              <div class="relative w-6 h-6">
+                <div class="absolute inset-0 bg-cyan-500 rounded-full animate-marker-pulse"
+                  style="animation-delay: 0.5s"></div>
+                <div class="absolute inset-1 bg-white rounded-full shadow-lg flex items-center justify-center">
+                  <img src="./assets/img/icon.ico" class="w-3 h-3 object-contain" alt="Logo">
+                </div>
+              </div>
+              <!-- Tooltip -->
+              <div
+                class="map-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-48 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl p-3 shadow-2xl text-center">
+                <h4 class="text-white font-bold text-sm">Zenexa Canada</h4>
+                <p class="text-cyan-300 text-xs mb-2">Waterloo, Ontario</p>
+                <span
+                  class="inline-block px-2 py-1 bg-cyan-500 text-white text-[10px] font-bold rounded hover:bg-cyan-600 transition-colors">Get
+                  Directions &rarr;</span>
+                <div
+                  class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white/20">
+                </div>
+              </div>
+            </div>
+
+            <!-- India Marker (Gandhinagar) ~ Top: 48%, Left: 68% -->
+            <div class="map-marker" style="top: 48%; left: 68%;"
+              onclick="window.open('https://www.google.com/maps/search/Gandhinagar,+Gujarat,+India', '_blank')">
+              <div class="relative w-6 h-6">
+                <div class="absolute inset-0 bg-blue-500 rounded-full animate-marker-pulse" style="animation-delay: 1s">
+                </div>
+                <div class="absolute inset-1 bg-white rounded-full shadow-lg flex items-center justify-center">
+                  <img src="./assets/img/icon.ico" class="w-3 h-3 object-contain" alt="Logo">
+                </div>
+              </div>
+              <!-- Tooltip -->
+              <div
+                class="map-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-48 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl p-3 shadow-2xl text-center">
+                <h4 class="text-white font-bold text-sm">Zenexa India</h4>
+                <p class="text-blue-300 text-xs mb-2">Gandhinagar, Gujarat</p>
+                <span
+                  class="inline-block px-2 py-1 bg-blue-500 text-white text-[10px] font-bold rounded hover:bg-blue-600 transition-colors">Get
+                  Directions &rarr;</span>
+                <div
+                  class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white/20">
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="text-secondary body-font relative">
-  <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
-    <div class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-      <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d72873.96930811743!2d72.60434854680138!3d23.22070433286164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2b987c6d6809%3A0xf86f06a7873e0391!2sGandhinagar%2C%20Gujarat!5e1!3m2!1sen!2sin!4v1763974725548!5m2!1sen!2sin" style="filter: grayscale(0) contrast(2) opacity(0.8);"></iframe>
-      <div class="bg-white w-full relative flex flex-wrap py-6 rounded shadow-md">
-        <div class="lg:w-1/2 px-6">
-          <h2 class="title-font font-semibold text-primary tracking-widest text-md">LOCATION</h2>
-          <ul class="text-primary">
-            <li class="font-semibold pt-1">Texas, USA</li>
-            <li class="font-semibold pt-1">Gandhinagar, Gujarat</li>
-            <li class="font-semibold pt-1">Waterloo, Canada</li>
-          </ul>
-        </div>
-        <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
-          <h2 class="title-font font-semibold text-primary tracking-widest text-md">EMAIL</h2>
-          <a href="mailto:info@zenexainfotech.com" class="text-primary leading-relaxed font-semibold">info@zenexainfotech.com</a>
-          <h2 class="title-font font-semibold text-primary tracking-widest text-md mt-4">PHONE</h2>
-          <a href="call:+1 832 735 7799" class="text-primary leading-relaxed font-semibold">+1 832 735 7799</a>
-        </div>
-      </div>
-    </div>
-    <div class="lg:w-1/3 md:w-1/2 bg-white flex md:ml-auto w-full md:py-8 mt-8 md:mt-0 flex-wrap">
-      <h2 class="w-full text-primary text-3xl Saira mb-3 font-semibold">Get in touch</h2>
-      <div class="w-1/2 relative pr-1 mb-4">
-        <label for="name" class="leading-7 text-md font-semibold Saira text-primary">First Name</label>
-        <input type="text" id="name" name="f_name" class="w-full bg-white  border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-      </div>
-      <div class="w-1/2 relative pl-1 mb-4">
-        <label for="name" class="leading-7 text-md font-semibold Saira text-primary">Last Name</label>
-        <input type="text" id="name" name="l_name" class="w-full bg-white  border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-      </div>
-      <div class="w-1/2 relative pr-1 mb-4">
-        <label for="name" class="leading-7 text-md font-semibold Saira text-primary">Company Name</label>
-        <input type="text" id="name" name="c_name" class="w-full bg-white  border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-      </div>
-      <div class="w-1/2 relative pl-1 mb-4">
-        <label for="name" class="leading-7 text-md font-semibold Saira text-primary">Email Address</label>
-        <input type="email" id="name" name="eamil" class="w-full bg-white  border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-      </div>
-      <div class="w-full relative mb-4">
-        <label for="message" class="leading-7 text-md font-semibold Saira text-primary">Message</label>
-        <textarea id="message" name="message" class="w-full bg-white  border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-      </div>
-      <button class="w-full text-white bg-secondary border-0 py-2 px-6 focus:outline-none hover:bg-primary rounded text-lg">Submit</button>
-    </div>
-  </div>
-</section>
-<div id="footer"></div>
+  </section>
+
+  <!-- Footer Placeholder -->
+  <div id="footer"></div>
+
+  <!-- Live Chat Widget -->
+  <div id="live-chat"></div>
+
+  <!-- Newsletter Popup -->
+  <div id="newsletter"></div>
 </body>
+
 </html>

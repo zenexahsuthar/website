@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights & News | Zenexa Infotech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/img/icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="../assets/lib/aos/dist/aos.css" rel="stylesheet">
+    <script src="../assets/lib/aos/dist/aos.js"></script>
+
+    <script>
+        window.onload = function () {
+            AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-cubic' });
+        }
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
+                    colors: { primary: "#0f766e", secondary: "#0d9488", accent: "#06b6d4", dark: "#0f172a" },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+        $(function () { $("#header").load("../header.html"); $("#footer").load("../footer.html"); });
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #2dd4bf 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden selection:bg-teal-200 selection:text-teal-900">
+    <div id="header" class="relative z-[1000]"></div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-24 overflow-hidden bg-slate-900 min-h-[60vh] flex items-center">
+        <div class="absolute inset-0 z-0">
+            <div
+                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMCwxODQsMTY2LDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-20">
+            </div>
+            <div
+                class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-teal-500/10 rounded-full blur-[120px] animate-blob">
+            </div>
+            <div
+                class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-cyan-500/10 rounded-full blur-[120px] animate-blob animation-delay-2000">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div data-aos="fade-down"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 text-sm font-bold mb-8">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" />
+                </svg>
+                Knowledge Hub
+            </div>
+            <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight">
+                Latest <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Insights</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                Expert analysis, industry trends, and strategic guides to help you navigate the evolving healthcare
+                landscape.
+            </p>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <article data-aos="fade-up"
+                    class="group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-teal-500/10 transition-all duration-500 border border-slate-100 flex flex-col h-full hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                            alt="HCC Coding">
+                        <span
+                            class="absolute top-4 left-4 z-20 px-4 py-1.5 bg-teal-500/90 backdrop-blur-md text-white text-xs font-bold rounded-full shadow-lg">Compliance</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex items-center gap-3 text-sm text-slate-500 mb-4 font-medium">
+                            <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg> Oct 24, 2023</span>
+                            <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3
+                            class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-teal-600 transition-colors leading-tight">
+                            Navigating the New HCC Coding Guidelines for 2024</h3>
+                        <p class="text-slate-600 mb-6 line-clamp-3 leading-relaxed flex-grow">Understanding the latest
+                            changes in Hierarchical Condition Category (HCC) coding is crucial for accurate risk
+                            adjustment and reimbursement.</p>
+                        <a href="#"
+                            class="inline-flex items-center text-teal-600 font-bold hover:text-teal-700 group/link">
+                            Read Article
+                            <svg class="w-5 h-5 ml-2 transform group-hover/link:translate-x-1 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article data-aos="fade-up" data-aos-delay="100"
+                    class="group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-500 border border-slate-100 flex flex-col h-full hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                            alt="AI in Healthcare">
+                        <span
+                            class="absolute top-4 left-4 z-20 px-4 py-1.5 bg-cyan-500/90 backdrop-blur-md text-white text-xs font-bold rounded-full shadow-lg">Technology</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex items-center gap-3 text-sm text-slate-500 mb-4 font-medium">
+                            <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg> Oct 18, 2023</span>
+                            <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3
+                            class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-cyan-600 transition-colors leading-tight">
+                            The Role of AI in Medical Record Retrieval</h3>
+                        <p class="text-slate-600 mb-6 line-clamp-3 leading-relaxed flex-grow">How artificial
+                            intelligence is revolutionizing the speed and accuracy of retrieving medical records for
+                            payers and providers.</p>
+                        <a href="#"
+                            class="inline-flex items-center text-cyan-600 font-bold hover:text-cyan-700 group/link">
+                            Read Article
+                            <svg class="w-5 h-5 ml-2 transform group-hover/link:translate-x-1 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article data-aos="fade-up" data-aos-delay="200"
+                    class="group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-purple-500/10 transition-all duration-500 border border-slate-100 flex flex-col h-full hover:-translate-y-2">
+                    <div class="relative h-64 overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent z-10 opacity-60 group-hover:opacity-40 transition-opacity">
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=800&q=80"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                            alt="Revenue Cycle">
+                        <span
+                            class="absolute top-4 left-4 z-20 px-4 py-1.5 bg-purple-500/90 backdrop-blur-md text-white text-xs font-bold rounded-full shadow-lg">Operations</span>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex items-center gap-3 text-sm text-slate-500 mb-4 font-medium">
+                            <span class="flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                                    </path>
+                                </svg> Sep 30, 2023</span>
+                            <span class="w-1 h-1 rounded-full bg-slate-300"></span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3
+                            class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-purple-600 transition-colors leading-tight">
+                            Optimizing Revenue Cycle Management</h3>
+                        <p class="text-slate-600 mb-6 line-clamp-3 leading-relaxed flex-grow">Strategies to reduce claim
+                            denials and improve cash flow through efficient revenue cycle management practices.</p>
+                        <a href="#"
+                            class="inline-flex items-center text-purple-600 font-bold hover:text-purple-700 group/link">
+                            Read Article
+                            <svg class="w-5 h-5 ml-2 transform group-hover/link:translate-x-1 transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+</body>
+
+</html>

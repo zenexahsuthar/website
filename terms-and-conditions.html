@@ -1,176 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms & Conditions | Zenexa Infotech</title>
-<link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
-<!-- <script src="./../assets/js/tailwind.min.js"></script> -->
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="./assets/lib/aos/dist/aos.css" rel="stylesheet">
-<script src="./assets/lib/aos/dist/aos.js"></script>
-<script>
-  window.onload = function()
-  {
-  AOS.init();
-  }
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: "#004b5b",
-          secondary: "#0a816f",
-        },
-        fontFamily: {
-          inter: ["Inter", "sans-serif"],
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions | Zenexa Infotech</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="./assets/lib/aos/dist/aos.css" rel="stylesheet">
+  <script src="./assets/lib/aos/dist/aos.js"></script>
+
+  <script>
+    window.onload = function () {
+      AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-cubic' });
+    }
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
+          colors: { primary: "#0f766e", secondary: "#0d9488", accent: "#06b6d4", dark: "#0f172a" }
         }
       }
     }
-  }
-    $(function(){
-  $("#header").load("./../header.html"); 
-  $("#footer").load("./../footer.html"); 
-});
-</script>
-<style> 
-.Saira {
-  font-family: "Saira", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-#services:hover .services-box {
-  display:block !important;
-}
-#aboutus:hover .aboutus-box {
-  display:block !important;
-}
-#insights:hover .insights-box {
-  display:block !important;
-}
-header{
-  z-index: 10000!important;
-}
-  @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
-  }
-  .float-animation { animation: float 5s ease-in-out infinite; }
-  @keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  .fade-up { animation: fadeUp 1s ease-out forwards; }
-</style>
+    $(function () { $("#header").load("./header.html"); $("#footer").load("./footer.html"); });
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+  </style>
 </head>
-<body class="">
-<div class="sticky top-0" id="header"></div>
-<section class="py-24">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-      <h1 data-aos="fade-up" class="text-[40px] md:text-[50px] font-bold text-secondary">
-      <span class="text-primary Saira">
-        Terms &
-      </span>
-        Conditions
+
+<body class="bg-slate-50 text-slate-800 selection:bg-teal-200 selection:text-teal-900">
+  <div id="header" class="relative z-[1000]"></div>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 overflow-hidden bg-slate-900 min-h-[40vh] flex items-center">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-[url('./assets/hero_bg.jpeg')] bg-cover bg-center opacity-10 mix-blend-overlay">
+      </div>
+      <div class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-cyan-500/10 rounded-full blur-[120px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-extrabold text-white mb-6">
+        Terms & <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Conditions</span>
       </h1>
+      <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-300 max-w-2xl mx-auto">
+        Please read these terms carefully before using our services.
+      </p>
     </div>
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
-           Introduction
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">                 
-          Welcome to Zenexa Infotech Pvt Ltd. These Terms and Conditions outline the rules that govern your use of our website, record request platform, and medical record retrieval services. By using our services, whether by submitting a request, accessing our systems, or engaging with our team, you agree to be bound by these Terms. If you do not agree, please do not use our services.
-        </p>
-      </div>
-    </div>
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
-        Scope of Services
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-        
-Zenexa specializes in the retrieval, processing, and secure delivery of medical records for patients, healthcare providers, insurers, attorneys, and other authorized representatives. We act solely as a facilitator and do not alter, create, or medically interpret records. All requests must be supported by valid authorization, consent, or legal documentation, and processing times may vary depending on provider responsiveness, record availability, and applicable legal requirements.
-        </p>
-      </div>
-    </div>
+  </section>
 
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
+  <!-- Content -->
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 p-8 md:p-12 space-y-12">
+
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">01</span>
+            Introduction
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            Welcome to Zenexa Infotech Pvt Ltd. These Terms and Conditions outline the rules that govern your use of our
+            website, record request platform, and medical record retrieval services. By using our services, whether by
+            submitting a request, accessing our systems, or engaging with our team, you agree to be bound by these
+            Terms. If you do not agree, please do not use our services.
+          </p>
+        </div>
+
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">02</span>
+            Scope of Services
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            Zenexa specializes in the retrieval, processing, and secure delivery of medical records for patients,
+            healthcare providers, insurers, attorneys, and other authorized representatives. We act solely as a
+            facilitator and do not alter, create, or medically interpret records. All requests must be supported by
+            valid authorization, consent, or legal documentation, and processing times may vary depending on provider
+            responsiveness, record availability, and applicable legal requirements.
+          </p>
+        </div>
+
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">03</span>
             Eligibility & Client Obligations
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-       
-By using our services, you confirm that you are at least 18 years of age and legally authorized to request or access medical records. You are responsible for providing accurate and lawful documentation, ensuring compliance with healthcare, privacy, and data protection laws, and using retrieved records only for authorized purposes such as patient care, insurance claims, or litigation. You acknowledge that you assume full responsibility for the use and safeguarding of records once delivered.
-        </p>
-      </div>
-    </div>
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
-           Data Privacy & Confidentiality
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-          
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            By using our services, you confirm that you are at least 18 years of age and legally authorized to request
+            or access medical records. You are responsible for providing accurate and lawful documentation, ensuring
+            compliance with healthcare, privacy, and data protection laws, and using retrieved records only for
+            authorized purposes such as patient care, insurance claims, or litigation. You acknowledge that you assume
+            full responsibility for the use and safeguarding of records once delivered.
+          </p>
+        </div>
 
-We are committed to protecting the confidentiality of all personal and medical information. Zenexa employs industry-standard security practices to safeguard data and may collect, process, and share information strictly as outlined in our Privacy Policy. While we take reasonable steps to maintain compliance, we do not guarantee adherence to foreign data protection regimes such as HIPAA or GDPR unless expressly contracted.
-        </p>
-      </div>
-    </div>
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">04</span>
+            Data Privacy & Confidentiality
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            We are committed to protecting the confidentiality of all personal and medical information. Zenexa employs
+            industry-standard security practices to safeguard data and may collect, process, and share information
+            strictly as outlined in our Privacy Policy. While we take reasonable steps to maintain compliance, we do not
+            guarantee adherence to foreign data protection regimes such as HIPAA or GDPR unless expressly contracted.
+          </p>
+        </div>
 
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
-          Fees & Payment Terms
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-         
-All service fees are communicated in advance and depend on the complexity, urgency, and volume of the request. Payments must be made in accordance with the agreed terms, which may include prepaid arrangements, invoicing, or subscription-based models. Failure to pay as agreed may result in suspension or termination of services until the account is settled.
-        </p>
-      </div>
-    </div>
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
-          Liability & Disclaimers
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-          
-          Zenexa shall not be liable for delays, incomplete retrievals, or inaccuracies caused by third-party providers, custodians, or regulatory restrictions. We do not guarantee the authenticity or completeness of records obtained from external sources. To the maximum extent permitted by law, Zenexa disclaims liability for indirect, incidental, or consequential damages arising from the use of our services.
-        </p>
-      </div>
-    </div>
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
-           Updates and Contact Information
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-          Intellectual Property & Termination
-          All proprietary systems, technology, methodologies, and content provided by Zenexa remain our intellectual property. Clients may not copy, distribute, reverse engineer, or exploit our processes for competitive purposes without written authorization. We reserve the right to suspend or terminate services if these Terms are breached, if false or fraudulent documents are provided, or if records are used unlawfully.
-        </p>
-      </div>
-    </div>
-     <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">05</span>
+            Fees & Payment Terms
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            All service fees are communicated in advance and depend on the complexity, urgency, and volume of the
+            request. Payments must be made in accordance with the agreed terms, which may include prepaid arrangements,
+            invoicing, or subscription-based models. Failure to pay as agreed may result in suspension or termination of
+            services until the account is settled.
+          </p>
+        </div>
+
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">06</span>
+            Liability & Disclaimers
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            Zenexa shall not be liable for delays, incomplete retrievals, or inaccuracies caused by third-party
+            providers, custodians, or regulatory restrictions. We do not guarantee the authenticity or completeness of
+            records obtained from external sources. To the maximum extent permitted by law, Zenexa disclaims liability
+            for indirect, incidental, or consequential damages arising from the use of our services.
+          </p>
+        </div>
+
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">07</span>
+            Intellectual Property & Termination
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            All proprietary systems, technology, methodologies, and content provided by Zenexa remain our intellectual
+            property. Clients may not copy, distribute, reverse engineer, or exploit our processes for competitive
+            purposes without written authorization. We reserve the right to suspend or terminate services if these Terms
+            are breached, if false or fraudulent documents are provided, or if records are used unlawfully.
+          </p>
+        </div>
+
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">08</span>
             Governing Law & Updates
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-       
-        These Terms shall be governed by and interpreted in accordance with the laws of India, with disputes subject to the exclusive jurisdiction of the courts in Bengaluru, Karnataka. Parties agree to attempt resolution through good-faith negotiation prior to litigation. Zenexa may update or amend these Terms periodically to reflect changes in services or regulations, and continued use of our services constitutes acceptance of the revised Terms. For any queries, please contact us at legal@zenexainfotech.com.
-        </p>
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            These Terms shall be governed by and interpreted in accordance with the laws of India, with disputes subject
+            to the exclusive jurisdiction of the courts in Bengaluru, Karnataka. Parties agree to attempt resolution
+            through good-faith negotiation prior to litigation. Zenexa may update or amend these Terms periodically to
+            reflect changes in services or regulations, and continued use of our services constitutes acceptance of the
+            revised Terms. For any queries, please contact us at <a href="mailto:legal@zenexainfotech.com"
+              class="text-teal-600 font-bold hover:underline">legal@zenexainfotech.com</a>.
+          </p>
+        </div>
+
       </div>
     </div>
-  </div>
-</section>
-<div id="footer"></div>
+  </section>
+
+  <div id="footer"></div>
 </body>
+
 </html>

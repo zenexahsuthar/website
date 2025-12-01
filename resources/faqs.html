@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs | Zenexa Infotech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/img/icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="../assets/lib/aos/dist/aos.css" rel="stylesheet">
+    <script src="../assets/lib/aos/dist/aos.js"></script>
+
+    <script>
+        window.onload = function () {
+            AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-cubic' });
+        }
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
+                    colors: { primary: "#0f766e", secondary: "#0d9488", accent: "#06b6d4", dark: "#0f172a" },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+        $(function () { $("#header").load("../header.html"); $("#footer").load("../footer.html"); });
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        details>summary {
+            list-style: none;
+        }
+
+        details>summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden selection:bg-teal-200 selection:text-teal-900">
+    <div id="header" class="relative z-[1000]"></div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-24 overflow-hidden bg-slate-900 min-h-[60vh] flex items-center">
+        <div class="absolute inset-0 z-0">
+            <div
+                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMCwxODQsMTY2LDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-20">
+            </div>
+            <div
+                class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-teal-500/10 rounded-full blur-[120px] animate-blob">
+            </div>
+            <div
+                class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-cyan-500/10 rounded-full blur-[120px] animate-blob animation-delay-2000">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div data-aos="fade-down"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 text-sm font-bold mb-8">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                        clip-rule="evenodd" />
+                </svg>
+                Help Center
+            </div>
+            <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight">
+                Frequently Asked <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Questions</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                Everything you need to know about our services, compliance standards, and operational processes.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-6 space-y-6">
+            <!-- FAQ 1 -->
+            <details data-aos="fade-up"
+                class="group bg-white rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 overflow-hidden open:shadow-xl open:shadow-teal-500/10 transition-all duration-500">
+                <summary
+                    class="flex items-center justify-between p-8 cursor-pointer bg-white hover:bg-slate-50 transition-colors select-none">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-teal-50 flex items-center justify-center text-teal-600 group-open:bg-teal-500 group-open:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-open:text-teal-600 transition-colors">What
+                            measures do you take to ensure HIPAA compliance?</h3>
+                    </div>
+                    <span
+                        class="transform group-open:rotate-180 transition-transform duration-300 text-slate-400 group-open:text-teal-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-8 pt-0 text-slate-600 leading-relaxed border-t border-slate-100/50">
+                    <p class="mb-4">We adhere to strict HIPAA guidelines, employing end-to-end encryption (AES-256),
+                        secure data transmission protocols, and regular third-party compliance audits.</p>
+                    <p>All our staff undergo rigorous, ongoing training to ensure patient data privacy and security. We
+                        also sign Business Associate Agreements (BAA) with all our clients to guarantee accountability.
+                    </p>
+                </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details data-aos="fade-up" data-aos-delay="100"
+                class="group bg-white rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 overflow-hidden open:shadow-xl open:shadow-cyan-500/10 transition-all duration-500">
+                <summary
+                    class="flex items-center justify-between p-8 cursor-pointer bg-white hover:bg-slate-50 transition-colors select-none">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-600 group-open:bg-cyan-500 group-open:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-open:text-cyan-600 transition-colors">How
+                            quickly can you scale your team for large projects?</h3>
+                    </div>
+                    <span
+                        class="transform group-open:rotate-180 transition-transform duration-300 text-slate-400 group-open:text-cyan-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-8 pt-0 text-slate-600 leading-relaxed border-t border-slate-100/50">
+                    <p>We have a flexible workforce model that allows us to scale up rapidly. Depending on the project
+                        scope, we can typically deploy additional resources within 1-2 weeks to meet your deadlines.</p>
+                </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details data-aos="fade-up" data-aos-delay="200"
+                class="group bg-white rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 overflow-hidden open:shadow-xl open:shadow-blue-500/10 transition-all duration-500">
+                <summary
+                    class="flex items-center justify-between p-8 cursor-pointer bg-white hover:bg-slate-50 transition-colors select-none">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 group-open:bg-blue-500 group-open:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-open:text-blue-600 transition-colors">Do you
+                            offer custom reporting and analytics?</h3>
+                    </div>
+                    <span
+                        class="transform group-open:rotate-180 transition-transform duration-300 text-slate-400 group-open:text-blue-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-8 pt-0 text-slate-600 leading-relaxed border-t border-slate-100/50">
+                    <p>Yes, we provide customizable dashboards and detailed reports tailored to your specific KPIs. Our
+                        analytics team works with you to ensure you have visibility into the metrics that matter most to
+                        your organization, such as retrieval rates, coding accuracy, and financial impact.</p>
+                </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details data-aos="fade-up" data-aos-delay="300"
+                class="group bg-white rounded-2xl shadow-lg shadow-slate-200/50 border border-slate-100 overflow-hidden open:shadow-xl open:shadow-indigo-500/10 transition-all duration-500">
+                <summary
+                    class="flex items-center justify-between p-8 cursor-pointer bg-white hover:bg-slate-50 transition-colors select-none">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600 group-open:bg-indigo-500 group-open:text-white transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 group-open:text-indigo-600 transition-colors">What
+                            is your accuracy rate for risk adjustment coding?</h3>
+                    </div>
+                    <span
+                        class="transform group-open:rotate-180 transition-transform duration-300 text-slate-400 group-open:text-indigo-500">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </span>
+                </summary>
+                <div class="p-8 pt-0 text-slate-600 leading-relaxed border-t border-slate-100/50">
+                    <p>We maintain an industry-leading accuracy rate of over 98%. Our multi-tiered quality assurance
+                        process involves initial coding by certified professionals, senior review, and random audits to
+                        ensure the highest level of precision and compliance.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+</body>
+
+</html>

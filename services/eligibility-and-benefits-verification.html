@@ -1,132 +1,303 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-Eligibility & Benefits Verification | Zenexa Infotech</title>
-<link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
-<!-- <script src="./../assets/js/tailwind.min.js"></script> -->
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="icon" type="image/x-icon" href="./../assets/img/icon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: "#004b5b",
-          secondary: "#0a816f",
-        },
-        fontFamily: {
-          inter: ["Inter", "sans-serif"],
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eligibility & Benefits Verification | Zenexa Infotech</title><script>if(localStorage.theme==="dark"||(!("theme" in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark")}</script>
+  <meta name="description"
+    content="Real-time insurance eligibility and benefits verification to prevent claim denials and billing delays. Streamline your revenue cycle.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="../assets/img/icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="../assets/lib/aos/dist/aos.css" rel="stylesheet">
+  <script src="../assets/lib/aos/dist/aos.js"></script><script src="../assets/js/enhanced-features.js" defer></script>
+  <script>
+    window.onload = function () {
+      AOS.init({ duration: 800, once: true, offset: 100, easing: 'ease-out-cubic' });
+      window.addEventListener('scroll', () => {
+        const headerBg = document.getElementById('header-bg');
+        if (headerBg) {
+          if (window.scrollY > 20) {
+            headerBg.classList.add('bg-white/90', 'shadow-md');
+            headerBg.classList.remove('bg-white/70');
+          } else {
+            headerBg.classList.remove('bg-white/90', 'shadow-md');
+            headerBg.classList.add('bg-white/70');
+          }
+        }
+      });
+    }
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
+          colors: { primary: "#0f766e", secondary: "#0d9488", accent: "#06b6d4" },
+          animation: { 'blob': 'blob 7s infinite', 'float': 'float 6s ease-in-out infinite' },
+          keyframes: {
+            blob: { '0%': { transform: 'translate(0px, 0px) scale(1)' }, '33%': { transform: 'translate(30px, -50px) scale(1.1)' }, '66%': { transform: 'translate(-20px, 20px) scale(0.9)' }, '100%': { transform: 'translate(0px, 0px) scale(1)' } },
+            float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } }
+          }
         }
       }
     }
-  }
-  $(function(){
-      $("#header").load("./../header.html"); 
-      $("#footer").load("./../footer.html"); 
-  });
-</script>
-<style> 
-.Saira {
-  font-family: "Saira", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-#services:hover .services-box {
-  display:block !important;
-}
-#aboutus:hover .aboutus-box {
-  display:block !important;
-}
-#insights:hover .insights-box {
-  display:block !important;
-}
-header{
-  z-index: 10000!important;
-}
-  @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
-  }
-  .float-animation { animation: float 5s ease-in-out infinite; }
-  @keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  .fade-up { animation: fadeUp 1s ease-out forwards; }
-</style>
+    $(function () { $("#header").load("../header.html"); $("#footer").load("../footer-ultimate.html");$("#live-chat").load("../components/live-chat-widget.html");$("#newsletter").load("../components/newsletter-popup.html"); });
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
-<body class="">
-<div class="sticky top-0" id="header"></div>
-<!-- hero section -->
-<section class="" style="background:url('./../assets/service.jpg');background-position:center;background-size:contain;background-attachment: fixed">
-  <div class="w-full px-6 bg-white/80 py-40">
-    <div class="max-w-7xl mx-auto">
-      <div class="max-w-7xl grid grid-cols-1  flex items-center justify-between">
-        <div class="absolute top-16 left-16 w-20 h-20 bg-teal-500/15 rounded-full blur-2xl float-animation"></div>
-        <div class="absolute top-40 right-20 w-28 h-28 bg-orange-500/15 rounded-full blur-2xl float-animation" style="animation-delay:1s"></div>
-        <!-- Glow Center -->
-        <div class="absolute inset-0 flex justify-center pointer-events-none">
-          <div class="w-[450px] h-[450px] bg-teal-300/20 blur-[130px] rounded-full"></div>
+
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden selection:bg-purple-200 selection:text-purple-900">
+  <div id="header"></div>
+
+  <!-- Hero Section -->
+  <section
+    class="relative pt-32 pb-24 overflow-hidden bg-gradient-to-br from-purple-900 via-pink-900 to-rose-900 min-h-[75vh] flex items-center">
+    <div class="absolute inset-0 z-0">
+      <div
+        class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgxNjgsODUsMjQ3LDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-40">
+      </div>
+      <div
+        class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-purple-500/20 rounded-full blur-[150px] animate-blob">
+      </div>
+      <div
+        class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-pink-500/20 rounded-full blur-[150px] animate-blob animation-delay-2000">
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-purple-300 text-sm font-bold mb-6">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd" />
+            </svg>
+            Instant Verification
+          </div>
+
+          <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+            Eligibility & <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Benefits
+              Verification</span>
+          </h1>
+
+          <p class="text-xl text-slate-200 mb-8 leading-relaxed">
+            Real-time insurance verification to prevent claim denials and billing delays. Ensure coverage before
+            services are rendered.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="../contact-us.html"
+              class="px-8 py-4 bg-white text-purple-900 rounded-xl font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+              Get Started
+            </a>
+            <a href="#features"
+              class="px-8 py-4 bg-transparent border border-white/30 text-white rounded-xl font-bold hover:bg-white/10 transition-all duration-300">
+              Learn More
+            </a>
+          </div>
         </div>
-        <div class="w-full">
-          <h2 class="md:text-[60px] Saira text-[30px] uppercase font-black text-secondary text-center leading-tight mb-10">
-        <span class="text-primary">
-          Eligibility & Benefits Verification
-        </span>
+
+        <div data-aos="fade-left" class="relative hidden lg:block">
+          <div
+            class="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+            <div class="text-center p-12">
+              <div class="text-9xl font-black text-white mb-4">✓</div>
+              <div class="text-3xl font-bold text-white/80">Verified Coverage</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-32 bg-white relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          Prevent Denials <span class="text-gradient">Before They Happen</span>
         </h2>
+        <p class="text-xl text-slate-600">
+          Real-time verification ensures accurate coverage information and reduces billing surprises.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div data-aos="fade-up" data-aos-delay="0"
+          class="group p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Real-Time Checks</h3>
+          <p class="text-slate-600 leading-relaxed">Instant eligibility verification through direct payer connections.
+          </p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100"
+          class="group p-8 rounded-2xl bg-gradient-to-br from-pink-50 to-rose-50 border border-pink-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Comprehensive Coverage</h3>
+          <p class="text-slate-600 leading-relaxed">Verify benefits, co-pays, deductibles, and authorization
+            requirements.</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200"
+          class="group p-8 rounded-2xl bg-gradient-to-br from-rose-50 to-orange-50 border border-rose-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500 to-orange-600 flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">24/7 Availability</h3>
+          <p class="text-slate-600 leading-relaxed">Round-the-clock verification services for uninterrupted operations.
+          </p>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="w-full bg-white py-20">
-  <div class="max-w-7xl mx-auto px-6 fle flex-wrap">
-    <div class="w-full">
-      <h2 class="text-xl md:text-3xl font-semibold text-primary Saira leading-tight">
-      Real-Time Insurance Verification for Clean Claims and Better Patient Experience
-      </h2>
-      <p class="mt-6 text-secondary leading-relaxed  saira font-medium text-justify text-lg">
-        At Zenexa Infotech, we simplify the eligibility and benefits verification process to help healthcare providers prevent claim denials and billing delays. Our verification specialists confirm insurance coverage details directly with payers — including eligibility dates, policy limits, co-pays, deductibles, and pre-authorization requirements — before services are rendered.
-        <br><br>
-        By integrating real-time verification workflows into your front-office processes, we ensure that patient insurance information is accurate, up to date, and fully compliant. This not only reduces administrative stress but also improves patient satisfaction and claim acceptance rates.
-        <br><br>
-        Whether you’re managing high patient volumes or complex payer networks, Zenexa provides scalable verification support tailored to your practice, platform, and compliance requirements
-      </p>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-32 bg-slate-50 relative overflow-hidden">
+    <div
+      class="absolute top-0 right-0 w-[800px] h-[800px] bg-purple-100/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
     </div>
-  </div>
-</section>
-<section class="w-full Saira py-20">
-  <div class="max-w-7xl px-8 mx-auto">
-    <div class="w-full bg-secondary rounded-xl px-10 py-8 grid grid-cols-1 md:grid-cols-3 items-center">
-      <!-- Text -->
-      <div class="md:col-span-2">
-        <h3 class="text-2xl mb-10 font-bold text-white">
-       Provider Outreach Services
-        </h3>
-        <a href="./../contact-us.html" class="mt-6 px-5 py-2.5 bg-white hover:bg-gray-200  font-semibold text-primary rounded-md text-sm">
-          Book Now
-        </a>
-      </div>
-      <div class="flex justify-center mt-10 md:mt-0">
-        <img 
-          src="./../assets/serivce-3.jpg"
-          class="w-40 h-40 rounded-full object-cover" style="animation-delay:0.5s"
-          alt="Person"
-        />
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            Streamline Your <span class="text-gradient">Verification Process</span>
+          </h2>
+          <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+            Our eligibility and benefits verification services eliminate billing surprises by confirming patient
+            coverage before services are rendered.
+          </p>
+          <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+            We verify active coverage, benefit details, co-payment amounts, deductibles, out-of-pocket maximums, and
+            prior authorization requirements in real-time.
+          </p>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            Our team works seamlessly with your scheduling and registration systems to ensure every patient encounter
+            begins with verified coverage information.
+          </p>
+        </div>
+
+        <div data-aos="fade-left" class="space-y-6">
+          <div class="p-6 bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Active Coverage</h4>
+                <p class="text-slate-600">Confirm patient insurance is active and valid for services.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-pink-100 flex items-center justify-center text-pink-600 shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Benefit Details</h4>
+                <p class="text-slate-600">Verify co-pays, deductibles, and out-of-pocket maximums.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-rose-100 flex items-center justify-center text-rose-600 shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Prior Authorization</h4>
+                <p class="text-slate-600">Identify and initiate required authorization processes early.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<div id="footer"></div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-purple-900 to-pink-900"></div>
+    <div class="absolute inset-0 bg-[url('../assets/hero_bg.jpeg')] bg-cover bg-center opacity-10 mix-blend-overlay">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-3 gap-8 items-center">
+        <div class="lg:col-span-2" data-aos="fade-right">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Eliminate Billing <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Surprises</span>
+          </h2>
+          <p class="text-xl text-slate-300">
+            Start verifying coverage in real-time and reduce claim denials today.
+          </p>
+        </div>
+        <div data-aos="fade-left" class="flex justify-center lg:justify-end">
+          <a href="../contact-us.html"
+            class="px-10 py-5 bg-white text-purple-900 rounded-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 text-lg inline-block">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div><div id="live-chat"></div><div id="newsletter"></div>
 </body>
+
 </html>

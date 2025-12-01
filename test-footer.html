@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Test</title>
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="./assets/lib/aos/dist/aos.css" rel="stylesheet">
+    <script src="./assets/lib/aos/dist/aos.js"></script>
+    <script src="./assets/js/enhanced-features.js" defer></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0f766e",
+                        secondary: "#0d9488",
+                        accent: "#06b6d4",
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+        
+        $(function() {
+            console.log("jQuery loaded!");
+            $("#footer").load("./footer-ultimate.html", function(response, status, xhr) {
+                if (status == "error") {
+                    console.error("Footer load error:", xhr.status, xhr.statusText);
+                    $("#footer").html("<div class='p-20 text-center text-red-600'>ERROR: Footer failed to load! " + xhr.status + " " + xhr.statusText + "</div>");
+                } else {
+                    console.log("Footer loaded successfully!");
+                }
+            });
+        });
+    </script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">Footer Test Page</h1>
+            <p class="text-slate-600 dark:text-slate-400 mb-8">Scroll down to see the footer</p>
+            <p class="text-sm text-slate-500 dark:text-slate-500">Check browser console (F12) for loading status</p>
+        </div>
+    </div>
+    
+    <div class="min-h-screen flex items-center justify-center bg-slate-100 dark:bg-slate-900">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Keep Scrolling...</h2>
+            <p class="text-slate-600 dark:text-slate-400">Footer should appear below</p>
+        </div>
+    </div>
+    
+    <!-- Footer will load here -->
+    <div id="footer"></div>
+</body>
+</html>

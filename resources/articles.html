@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles | Zenexa Infotech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/img/icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="../assets/lib/aos/dist/aos.css" rel="stylesheet">
+    <script src="../assets/lib/aos/dist/aos.js"></script>
+
+    <script>
+        window.onload = function () {
+            AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-cubic' });
+        }
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
+                    colors: { primary: "#0f766e", secondary: "#0d9488", accent: "#06b6d4", dark: "#0f172a" }
+                }
+            }
+        }
+        $(function () { $("#header").load("../header.html"); $("#footer").load("../footer.html"); });
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+    <div id="header" class="relative z-[1000]"></div>
+
+    <!-- Hero -->
+    <section class="relative pt-32 pb-20 overflow-hidden bg-slate-900">
+        <div
+            class="absolute inset-0 bg-[url('../assets/hero_bg.jpeg')] bg-cover bg-center opacity-20 mix-blend-overlay">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/90"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-bold text-white mb-6">Knowledge <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Base</span></h1>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-300 max-w-2xl mx-auto">In-depth
+                articles, whitepapers, and technical guides for healthcare professionals.</p>
+        </div>
+    </section>
+
+    <!-- Articles List -->
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-6 space-y-8">
+            <!-- Article 1 -->
+            <div data-aos="fade-up"
+                class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100 flex gap-6 items-start">
+                <div
+                    class="hidden sm:flex w-16 h-16 rounded-2xl bg-teal-50 text-teal-600 items-center justify-center shrink-0 group-hover:bg-teal-600 group-hover:text-white transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                        </path>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2 group-hover:text-teal-600 transition-colors">The
+                        Ultimate Guide to HEDIS Measures</h3>
+                    <p class="text-slate-600 mb-4">A comprehensive breakdown of Healthcare Effectiveness Data and
+                        Information Set (HEDIS) measures and how to improve your scores.</p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="text-teal-600 font-bold hover:text-teal-700 text-sm uppercase tracking-wide">Read
+                            Article</a>
+                        <span class="text-slate-300">|</span>
+                        <span class="text-slate-400 text-sm">12 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div data-aos="fade-up" data-aos-delay="100"
+                class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100 flex gap-6 items-start">
+                <div
+                    class="hidden sm:flex w-16 h-16 rounded-2xl bg-cyan-50 text-cyan-600 items-center justify-center shrink-0 group-hover:bg-cyan-600 group-hover:text-white transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                        </path>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2 group-hover:text-teal-600 transition-colors">Data
+                        Security in Healthcare Outsourcing</h3>
+                    <p class="text-slate-600 mb-4">Best practices for ensuring HIPAA compliance and data security when
+                        working with BPO partners.</p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="text-teal-600 font-bold hover:text-teal-700 text-sm uppercase tracking-wide">Read
+                            Article</a>
+                        <span class="text-slate-300">|</span>
+                        <span class="text-slate-400 text-sm">8 min read</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Article 3 -->
+            <div data-aos="fade-up" data-aos-delay="200"
+                class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100 flex gap-6 items-start">
+                <div
+                    class="hidden sm:flex w-16 h-16 rounded-2xl bg-purple-50 text-purple-600 items-center justify-center shrink-0 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                        </path>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2 group-hover:text-teal-600 transition-colors">Risk
+                        Adjustment 101: A Primer for Payers</h3>
+                    <p class="text-slate-600 mb-4">An introductory guide to risk adjustment models, including CMS-HCC
+                        and HHS-HCC.</p>
+                    <div class="flex items-center gap-4">
+                        <a href="#"
+                            class="text-teal-600 font-bold hover:text-teal-700 text-sm uppercase tracking-wide">Read
+                            Article</a>
+                        <span class="text-slate-300">|</span>
+                        <span class="text-slate-400 text-sm">15 min read</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+</body>
+
+</html>
