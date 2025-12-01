@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenexa Infotech | Future of Healthcare Compliance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="./assets/lib/aos/dist/aos.css" rel="stylesheet">
+  <script src="./assets/lib/aos/dist/aos.js"></script>
+
+  <script>
+    window.onload = function () {
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100,
+        easing: 'ease-out-cubic'
+      });
+
+      window.addEventListener('scroll', () => {
+        const headerBg = document.getElementById('header-bg');
+        if (headerBg) {
+          if (window.scrollY > 20) {
+            headerBg.classList.add('bg-white/90', 'shadow-md');
+            headerBg.classList.remove('bg-white/70');
+          } else {
+            headerBg.classList.remove('bg-white/90', 'shadow-md');
+            headerBg.classList.add('bg-white/70');
+          }
+        }
+      });
+    }
+
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
+          },
+          colors: {
+            primary: "#0f766e",
+            secondary: "#0d9488",
+            accent: "#06b6d4",
+            dark: "#0f172a",
+          },
+          animation: {
+            'blob': 'blob 7s infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'spin-slow': 'spin 12s linear infinite',
+          },
+          keyframes: {
+            blob: {
+              '0%': { transform: 'translate(0px, 0px) scale(1)' },
+              '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+              '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+              '100%': { transform: 'translate(0px, 0px) scale(1)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            shimmer: {
+              '100%': { transform: 'translateX(100%)' }
+            }
+          }
+        }
+      }
+    }
+
+    $(function () {
+      $("#header").load("./header.html");
+      $("#footer").load("./footer.html");
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #0f766e 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden selection:bg-teal-200 selection:text-teal-900">
+
+  <!-- Header Placeholder -->
+  <div id="header"></div>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <div class="absolute inset-0 bg-slate-50 z-0">
+      <div
+        class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMTUsIDExOCwgMTEwLCAwLjEpIi8+PC9zdmc+')] [mask-image:linear-gradient(to_bottom,white,transparent)]">
+      </div>
+      <div
+        class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-teal-400/30 rounded-full blur-[100px] animate-blob">
+      </div>
+      <div
+        class="absolute top-[20%] right-[-10%] w-[35%] h-[35%] bg-cyan-400/30 rounded-full blur-[100px] animate-blob animation-delay-2000">
+      </div>
+      <div
+        class="absolute bottom-[-10%] left-[20%] w-[40%] h-[40%] bg-blue-400/30 rounded-full blur-[100px] animate-blob animation-delay-4000">
+      </div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center h-full">
+      <div data-aos="fade-right" class="text-center lg:text-left py-12">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-teal-100 text-teal-700 text-sm font-bold mb-8 shadow-sm hover:shadow-md transition-shadow cursor-default">
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-teal-500"></span>
+          </span>
+          The Future of Healthcare Operations
+        </div>
+
+        <h1 class="text-5xl lg:text-7xl font-extrabold leading-[1.1] mb-6 text-slate-900 tracking-tight">
+          Where <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-500">Compliance</span>
+          <br>
+          Meets <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-500">Performance</span>
+        </h1>
+
+        <p class="text-lg lg:text-xl text-slate-600 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-medium">
+          Empowering healthcare organizations with AI-driven solutions for seamless compliance, risk adjustment, and
+          revenue cycle management.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a href="/contact-us.html"
+            class="group relative px-8 py-4 bg-teal-600 text-white rounded-xl font-bold shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50 hover:-translate-y-1 transition-all duration-300 text-lg overflow-hidden">
+            <div
+              class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]">
+            </div>
+            <span class="relative flex items-center gap-2 justify-center">
+              Book Consultation
+              <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6">
+                </path>
+              </svg>
+            </span>
+          </a>
+          <a href="#services"
+            class="px-8 py-4 bg-white/80 backdrop-blur-sm text-slate-700 border border-slate-200 rounded-xl font-bold hover:bg-white hover:border-teal-300 transition-all duration-300 text-lg flex items-center gap-2 justify-center shadow-sm hover:shadow-md">
+            Explore Services
+          </a>
+        </div>
+      </div>
+
+      <div data-aos="fade-left"
+        class="relative hidden lg:block h-full min-h-[600px] flex items-center justify-center perspective-1000">
+        <div class="relative w-[500px] h-[500px] animate-float">
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-teal-500 to-cyan-400 rounded-full blur-3xl opacity-20 animate-pulse">
+          </div>
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-[0_0_50px_rgba(20,184,166,0.3)] flex items-center justify-center z-20">
+            <div
+              class="w-32 h-32 bg-gradient-to-tr from-teal-600 to-cyan-500 rounded-full shadow-inner flex items-center justify-center relative overflow-hidden">
+              <div
+                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4yKSIvPjwvc3ZnPg==')] opacity-50 animate-spin-slow">
+              </div>
+              <img src="./assets/logo_white.png" class="w-16 h-16 object-contain drop-shadow-lg z-10" alt="Zenexa Logo">
+            </div>
+          </div>
+
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-teal-200/30 rounded-full animate-[spin_20s_linear_infinite]">
+            <div
+              class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-cyan-400 rounded-full shadow-[0_0_10px_#22d3ee]">
+            </div>
+          </div>
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] border border-dashed border-teal-200/20 rounded-full animate-[spin_30s_linear_infinite_reverse]">
+            <div class="absolute bottom-1/4 left-0 w-3 h-3 bg-teal-500 rounded-full shadow-[0_0_10px_#14b8a6]"></div>
+          </div>
+
+          <div
+            class="absolute top-0 right-0 p-4 bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl border border-white/50 animate-float animation-delay-1000 z-30 transform hover:scale-110 transition-transform cursor-pointer">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center text-green-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs text-slate-500 font-bold uppercase">Accuracy</p>
+                <p class="text-lg font-bold text-slate-900">99.8%</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="absolute bottom-20 -left-10 p-4 bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl border border-white/50 animate-float animation-delay-2000 z-30 transform hover:scale-110 transition-transform cursor-pointer">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs text-slate-500 font-bold uppercase">Security</p>
+                <p class="text-lg font-bold text-slate-900">HIPAA Ready</p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="absolute top-1/2 -right-16 p-4 bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl border border-white/50 animate-float animation-delay-3000 z-30 transform hover:scale-110 transition-transform cursor-pointer">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+                  </path>
+                </svg>
+              </div>
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">Data Entry &
+              Indexing</h3>
+            <p class="text-slate-600 mb-6">Transform disorganized records into structured, searchable, and
+              HIPAA-compliant
+              data.</p>
+            <a href="./services/data-entry-and-document-indexing.html"
+              class="inline-flex items-center text-teal-600 font-bold hover:text-teal-700 transition-colors">
+              Learn More
+              <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div data-aos="fade-up" data-aos-delay="200"
+            class="group bg-white rounded-2xl p-8 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-teal-500/10 transition-all duration-300 border border-slate-100 hover:-translate-y-2">
+            <div
+              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-teal-500/30 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">Chart
+              Abstraction</h3>
+            <p class="text-slate-600 mb-6">Precise chart abstraction and risk adjustment for Medicare Advantage and ACA
+              payers.</p>
+            <a href="/services/chart-abstraction-and-risk-adjustment-support.html"
+              class="inline-flex items-center text-teal-600 font-bold hover:text-teal-700 transition-colors">
+              Learn More
+              <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div data-aos="fade-up" data-aos-delay="300"
+            class="group bg-white rounded-2xl p-8 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-teal-500/10 transition-all duration-300 border border-slate-100 hover:-translate-y-2">
+            <div
+              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-teal-500/30 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">Claims
+              Management</h3>
+            <p class="text-slate-600 mb-6">End-to-end claims processing to maximize reimbursements and reduce denials.
+            </p>
+            <a href="/services/claims-management-and-coding-support.html"
+              class="inline-flex items-center text-teal-600 font-bold hover:text-teal-700 transition-colors">
+              Learn More
+              <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div data-aos="fade-up" data-aos-delay="400"
+            class="group bg-white rounded-2xl p-8 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-teal-500/10 transition-all duration-300 border border-slate-100 hover:-translate-y-2">
+            <div
+              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-teal-500/30 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">Eligibility
+              Verification</h3>
+            <p class="text-slate-600 mb-6">Real-time insurance verification to prevent claim denials and billing delays.
+            </p>
+            <a href="/services/eligibility-and-benefits-verification.html"
+              class="inline-flex items-center text-teal-600 font-bold hover:text-teal-700 transition-colors">
+              Learn More
+              <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div data-aos="fade-up" data-aos-delay="500"
+            class="group bg-white rounded-2xl p-8 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-teal-500/10 transition-all duration-300 border border-slate-100 hover:-translate-y-2">
+            <div
+              class="w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-teal-500/30 group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M6 6.878V6a2.25 2.25 0 0 1 2.25-2.25h7.5A2.25 2.25 0 0 1 18 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 0 0 4.5 9v.878m13.5-3A2.25 2.25 0 0 1 19.5 9v.878m0 0a2.246 2.246 0 0 0-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0 1 21 12v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6c0-.98.626-1.813 1.5-2.122">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-teal-600 transition-colors">Record
+              Retrieval</h3>
+            <p class="text-slate-600 mb-6">Secure medical record retrieval for payers, legal firms, and providers.</p>
+            <a href="/services/medical-record-retrieval-and-management.html"
+              class="inline-flex items-center text-teal-600 font-bold hover:text-teal-700 transition-colors">
+              Learn More
+              <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-teal-900"></div>
+    <div class="absolute inset-0 bg-[url('./assets/hero_bg.jpeg')] bg-cover bg-center opacity-10 mix-blend-overlay">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <h2 data-aos="fade-up" class="text-4xl md:text-5xl font-bold text-white mb-8">
+        Ready to Transform Your <br> <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Healthcare Operations?</span>
+      </h2>
+      <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-300 mb-12 max-w-2xl mx-auto">
+        Join hundreds of healthcare partners who trust Zenexa for compliance, accuracy, and performance.
+      </p>
+
+      <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col sm:flex-row gap-6 justify-center">
+        <a href="contact-us.html"
+          class="px-8 py-4 bg-white text-teal-900 rounded-xl font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg">
+          Get Started Now
+        </a>
+        <a href="contact-us.html"
+          class="px-8 py-4 bg-transparent border border-white/30 text-white rounded-xl font-bold hover:bg-white/10 transition-all duration-300 text-lg">
+          Contact Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Placeholder -->
+  <div id="footer"></div>
+</body>
+
+</html>

@@ -1,131 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Chart Abstraction & Risk Adjustment Support | Zenexa Infotech</title>
-<link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
-<!-- <script src="./../assets/js/tailwind.min.js"></script> -->
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="icon" type="image/x-icon" href="./../assets/img/icon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: "#004b5b",
-          secondary: "#0a816f",
-        },
-        fontFamily: {
-          inter: ["Inter", "sans-serif"],
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chart Abstraction & Risk Adjustment | Zenexa Infotech</title><script>if(localStorage.theme==="dark"||(!("theme" in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark")}</script>
+  <meta name="description"
+    content="Precise chart abstraction and risk adjustment support for Medicare Advantage and ACA payers. Maximize reimbursements with accurate HCC coding.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="../assets/img/icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="../assets/lib/aos/dist/aos.css" rel="stylesheet">
+  <script src="../assets/lib/aos/dist/aos.js"></script><script src="../assets/js/enhanced-features.js" defer></script>
+  <script>
+    window.onload = function () {
+      AOS.init({ duration: 800, once: true, offset: 100, easing: 'ease-out-cubic' });
+      window.addEventListener('scroll', () => {
+        const headerBg = document.getElementById('header-bg');
+        if (headerBg) {
+          if (window.scrollY > 20) {
+            headerBg.classList.add('bg-white/90', 'shadow-md');
+            headerBg.classList.remove('bg-white/70');
+          } else {
+            headerBg.classList.remove('bg-white/90', 'shadow-md');
+            headerBg.classList.add('bg-white/70');
+          }
+        }
+      });
+    }
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
+          colors: { primary: "#0f766e", secondary: "#0d9488", accent: "#06b6d4" },
+          animation: { 'blob': 'blob 7s infinite', 'float': 'float 6s ease-in-out infinite' },
+          keyframes: {
+            blob: { '0%': { transform: 'translate(0px, 0px) scale(1)' }, '33%': { transform: 'translate(30px, -50px) scale(1.1)' }, '66%': { transform: 'translate(-20px, 20px) scale(0.9)' }, '100%': { transform: 'translate(0px, 0px) scale(1)' } },
+            float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } }
+          }
         }
       }
     }
-  }
-  $(function(){
-      $("#header").load("./../header.html"); 
-      $("#footer").load("./../footer.html"); 
-  });
-</script>
-<style> 
-.Saira {
-  font-family: "Saira", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-#services:hover .services-box {
-  display:block !important;
-}
-#aboutus:hover .aboutus-box {
-  display:block !important;
-}
-#insights:hover .insights-box {
-  display:block !important;
-}
-header{
-  z-index: 10000!important;
-}
-  @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
-  }
-  .float-animation { animation: float 5s ease-in-out infinite; }
-  @keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  .fade-up { animation: fadeUp 1s ease-out forwards; }
-</style>
+    $(function () { $("#header").load("../header.html"); $("#footer").load("../footer-ultimate.html");$("#live-chat").load("../components/live-chat-widget.html");$("#newsletter").load("../components/newsletter-popup.html"); });
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
-<body class="">
-<div class="sticky top-0" id="header"></div>
-<!-- hero section -->
-<section class="" style="background:url('./../assets/service.jpg');background-position:center;background-size:contain;background-attachment: fixed">
-  <div class="w-full px-6 bg-white/80 py-40">
-    <div class="max-w-7xl mx-auto">
-      <div class="max-w-7xl grid grid-cols-1  flex items-center justify-between">
-        <div class="absolute top-16 left-16 w-20 h-20 bg-teal-500/15 rounded-full blur-2xl float-animation"></div>
-        <div class="absolute top-40 right-20 w-28 h-28 bg-orange-500/15 rounded-full blur-2xl float-animation" style="animation-delay:1s"></div>
-        <!-- Glow Center -->
-        <div class="absolute inset-0 flex justify-center pointer-events-none">
-          <div class="w-[450px] h-[450px] bg-teal-300/20 blur-[130px] rounded-full"></div>
+
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden selection:bg-blue-200 selection:text-blue-900">
+  <div id="header"></div>
+
+  <!-- Hero Section -->
+  <section
+    class="relative pt-32 pb-24 overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 min-h-[75vh] flex items-center">
+    <div class="absolute inset-0 z-0">
+      <div
+        class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSg1OSwxMzAsMjQ2LDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-40">
+      </div>
+      <div
+        class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-blue-500/20 rounded-full blur-[150px] animate-blob">
+      </div>
+      <div
+        class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-purple-500/20 rounded-full blur-[150px] animate-blob animation-delay-2000">
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-300 text-sm font-bold mb-6">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+            </svg>
+            Risk Adjustment Excellence
+          </div>
+
+          <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+            Chart Abstraction & <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Risk Adjustment</span>
+          </h1>
+
+          <p class="text-xl text-slate-200 mb-8 leading-relaxed">
+            Precise chart abstraction and risk adjustment for Medicare Advantage and ACA payers. Maximize reimbursements
+            with accurate HCC coding.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="../contact-us.html"
+              class="px-8 py-4 bg-white text-blue-900 rounded-xl font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+              Get Started
+            </a>
+            <a href="#features"
+              class="px-8 py-4 bg-transparent border border-white/30 text-white rounded-xl font-bold hover:bg-white/10 transition-all duration-300">
+              Learn More
+            </a>
+          </div>
         </div>
-        <div class="w-full">
-          <h2 class="md:text-[60px] Saira text-[30px] uppercase font-black text-secondary text-center leading-tight mb-10">
-        <span class="text-primary">     
-          Chart Abstraction & Risk Adjustment Support
-        </span>
+
+        <div data-aos="fade-left" class="relative hidden lg:block">
+          <div
+            class="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+            <div class="text-center p-12">
+              <div class="text-9xl font-black text-white mb-4">HCC</div>
+              <div class="text-2xl font-bold text-white/80">Hierarchical Condition Category</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-32 bg-white relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          Maximize Your <span class="text-gradient">Risk Scores</span>
         </h2>
+        <p class="text-xl text-slate-600">
+          Our certified coders ensure accurate HCC capture and compliant documentation for optimal reimbursement.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div data-aos="fade-up" data-aos-delay="0"
+          class="group p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Certified Coders</h3>
+          <p class="text-slate-600 leading-relaxed">CRC and CPC certified professionals with deep HCC expertise.</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100"
+          class="group p-8 rounded-2xl bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">RAF Score Optimization</h3>
+          <p class="text-slate-600 leading-relaxed">Maximize risk adjustment factor scores through comprehensive chart
+            review.</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200"
+          class="group p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Audit Ready</h3>
+          <p class="text-slate-600 leading-relaxed">Compliant documentation that withstands CMS and RADV audits.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<section class="w-full bg-white py-20">
-  <div class="max-w-7xl mx-auto px-6 fle flex-wrap">
-    <div class="w-full">
-      <h2 class="text-xl md:text-3xl font-semibold text-primary Saira leading-tight">
-        Accurate Chart Abstraction to Drive Risk Adjustment and Revenue Integrity
-      </h2>
-      <p class="mt-6 text-secondary leading-relaxed  saira font-medium text-justify text-lg">
-      At Zenexa Infotech, we deliver high-accuracy chart abstraction services designed to support risk adjustment programs across Medicare Advantage, ACA plans, and commercial payers. Our certified abstractors extract critical diagnosis and procedure data from clinical documentation to ensure proper HCC coding and optimized risk-adjusted payments.
-      <br><br>
-      Our team is trained across multiple EHR systems and abstraction platforms, working seamlessly within your guidelines to ensure coding accuracy, data consistency, and regulatory compliance. We focus on identifying chronic conditions and aligning documentation with risk scoring models to support better patient stratification and financial performance.
-      <br><br>
-      Whether you need abstraction for retrospective reviews, prospective interventions, or ongoing HEDIS and risk adjustment support, Zenexa provides the expertise, scalability, and quality controls to get it right the first time.
-      </p>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-32 bg-slate-50 relative overflow-hidden">
+    <div
+      class="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
     </div>
-  </div>
-</section>
-<section class="w-full Saira py-20">
-  <div class="max-w-7xl px-8 mx-auto">
-    <div class="w-full bg-secondary rounded-xl px-10 py-8 grid grid-cols-1 md:grid-cols-3 items-center">
-      <!-- Text -->
-      <div class="md:col-span-2">
-        <h3 class="text-2xl mb-10 font-bold text-white">
-       Provider Outreach Services
-        </h3>
-        <a href="./../contact-us.html" class="mt-6 px-5 py-2.5 bg-white hover:bg-gray-200  font-semibold text-primary rounded-md text-sm">
-          Book Now
-        </a>
-      </div>
-      <div class="flex justify-center mt-10 md:mt-0">
-        <img 
-          src="./../assets/serivce-3.jpg"
-          class="w-40 h-40 rounded-full object-cover" style="animation-delay:0.5s"
-          alt="Person"
-        />
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            Precision <span class="text-gradient">HCC Coding</span>
+          </h2>
+          <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+            Our chart abstraction and risk adjustment services help Medicare Advantage and ACA plans accurately capture
+            member acuity and maximize appropriate reimbursement.
+          </p>
+          <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+            We employ certified risk adjustment coders (CRC) who meticulously review medical charts to identify and
+            validate HCC codes, ensuring complete and compliant documentation.
+          </p>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            Our quality assurance process includes multi-level reviews, automated validation checks, and ongoing coder
+            education to maintain the highest standards of accuracy and compliance.
+          </p>
+        </div>
+
+        <div data-aos="fade-left" class="space-y-6">
+          <div class="p-6 bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Medicare Advantage</h4>
+                <p class="text-slate-600">Comprehensive HCC coding for MA plans and Star ratings.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-slate-900 mb-2">ACA Plans</h4>
+                <p class="text-slate-600">Risk adjustment coding for Affordable Care Act marketplace plans.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-slate-900 mb-2">RADV Preparation</h4>
+                <p class="text-slate-600">Audit-ready documentation for CMS Risk Adjustment Data Validation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<div id="footer"></div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-purple-900"></div>
+    <div class="absolute inset-0 bg-[url('../assets/hero_bg.jpeg')] bg-cover bg-center opacity-10 mix-blend-overlay">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-3 gap-8 items-center">
+        <div class="lg:col-span-2" data-aos="fade-right">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Optimize Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Risk
+              Scores</span>
+          </h2>
+          <p class="text-xl text-slate-300">
+            Partner with us for accurate HCC coding and maximum reimbursement.
+          </p>
+        </div>
+        <div data-aos="fade-left" class="flex justify-center lg:justify-end">
+          <a href="../contact-us.html"
+            class="px-10 py-5 bg-white text-blue-900 rounded-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 text-lg inline-block">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div><div id="live-chat"></div><div id="newsletter"></div>
 </body>
+
 </html>

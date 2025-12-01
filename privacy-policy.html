@@ -1,158 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy | Zenexa Infotech</title>
-<link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
-<!-- <script src="./../assets/js/tailwind.min.js"></script> -->
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="./assets/lib/aos/dist/aos.css" rel="stylesheet">
-<script src="./assets/lib/aos/dist/aos.js"></script>
-<script>
-  window.onload = function()
-  {
-  AOS.init();
-  }
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: "#004b5b",
-          secondary: "#0a816f",
-        },
-        fontFamily: {
-          inter: ["Inter", "sans-serif"],
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Zenexa Infotech</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="./assets/lib/aos/dist/aos.css" rel="stylesheet">
+  <script src="./assets/lib/aos/dist/aos.js"></script>
+
+  <script>
+    window.onload = function () {
+      AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-cubic' });
+    }
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
+          colors: { primary: "#0f766e", secondary: "#0d9488", accent: "#06b6d4", dark: "#0f172a" }
         }
       }
     }
-  }
-    $(function(){
-  $("#header").load("./../header.html"); 
-  $("#footer").load("./../footer.html"); 
-});
-</script>
-<style> 
-.Saira {
-  font-family: "Saira", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-#services:hover .services-box {
-  display:block !important;
-}
-#aboutus:hover .aboutus-box {
-  display:block !important;
-}
-#insights:hover .insights-box {
-  display:block !important;
-}
-header{
-  z-index: 10000!important;
-}
-  @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
-  }
-  .float-animation { animation: float 5s ease-in-out infinite; }
-  @keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-.fade-up { animation: fadeUp 1s ease-out forwards; }
-</style>
+    $(function () { $("#header").load("./header.html"); $("#footer").load("./footer.html"); });
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+  </style>
 </head>
-<body class="">
-<div class="sticky top-0" id="header"></div>
-<section class="py-24">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-     <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-      <h1 data-aos="fade-up" class="text-[40px] md:text-[50px] font-bold text-secondary">
-      <span class="text-primary Saira">
-        Privacy
-      </span>
-        Policy
+
+<body class="bg-slate-50 text-slate-800 selection:bg-teal-200 selection:text-teal-900">
+  <div id="header" class="relative z-[1000]"></div>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 overflow-hidden bg-slate-900 min-h-[40vh] flex items-center">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-[url('./assets/hero_bg.jpeg')] bg-cover bg-center opacity-10 mix-blend-overlay">
+      </div>
+      <div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-teal-500/10 rounded-full blur-[120px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-extrabold text-white mb-6">
+        Privacy <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Policy</span>
       </h1>
+      <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-300 max-w-2xl mx-auto">
+        Your trust is our priority. Learn how we protect your data.
+      </p>
     </div>
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
-           Introduction
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-        Introduction At Zenexa Infotech Pvt Ltd, your trust is our highest priority. As a provider of medical record retrieval and processing services, we understand the sensitive nature of the information we handle. This Privacy Policy explains how we collect, use, store, and protect personal and health-related data when you interact with our platform or engage our services.
-        </p>
-      </div>
-    </div>
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
-           Information We Collect
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-        We may collect different types of information to provide our services effectively. This includes personal details such as name, date of birth, address, phone number, and email address, as well as identifiers such as medical record numbers, insurance details, and provider information. We may also process medical and health information such as treatment histories, diagnostic reports, and clinical notes required for record retrieval. In addition, we collect limited non-personal data, including device details, IP addresses, and browser information, to ensure security and improve service delivery.
-        </p>
-      </div>
-    </div>
+  </section>
 
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
+  <!-- Content -->
+  <section class="py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 p-8 md:p-12 space-y-12">
+
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">01</span>
+            Introduction
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            At Zenexa Infotech Pvt Ltd, your trust is our highest priority. As a provider of medical record retrieval
+            and processing services, we understand the sensitive nature of the information we handle. This Privacy
+            Policy explains how we collect, use, store, and protect personal and health-related data when you interact
+            with our platform or engage our services.
+          </p>
+        </div>
+
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">02</span>
+            Information We Collect
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            We may collect different types of information to provide our services effectively. This includes personal
+            details such as name, date of birth, address, phone number, and email address, as well as identifiers such
+            as medical record numbers, insurance details, and provider information. We may also process medical and
+            health information such as treatment histories, diagnostic reports, and clinical notes required for record
+            retrieval. In addition, we collect limited non-personal data, including device details, IP addresses, and
+            browser information, to ensure security and improve service delivery.
+          </p>
+        </div>
+
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">03</span>
             How We Use Your Information
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-            The information collected is used solely for legitimate purposes. These include retrieving, processing, and delivering medical records to authorized entities, ensuring compliance in claims or litigation support, and facilitating healthcare coordination. We also use the information to communicate with you regarding requests and updates, enhance our systems to safeguard sensitive data, and detect or prevent fraudulent activity and security incidents.
-        </p>
-      </div>
-    </div>
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
-           Data Sharing and Disclosure
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-        Zenexa does not sell or rent personal or medical information to third parties. Data may only be shared under specific circumstances, such as with trusted service providers who operate under strict confidentiality agreements, with regulatory or legal authorities when required by law, or with individuals and entities that you or your authorized representative have consented to.
-        </p>
-      </div>
-    </div>
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            The information collected is used solely for legitimate purposes. These include retrieving, processing, and
+            delivering medical records to authorized entities, ensuring compliance in claims or litigation support, and
+            facilitating healthcare coordination. We also use the information to communicate with you regarding requests
+            and updates, enhance our systems to safeguard sensitive data, and detect or prevent fraudulent activity and
+            security incidents.
+          </p>
+        </div>
 
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
-          Data Security
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-          Protecting sensitive medical records is central to our operations. We use administrative, technical, and physical safeguards including encryption of data in transit and at rest, role-based access controls, multi-factor authentication, and regular security audits. While we follow leading industry practices and compliance standards, no electronic storage or transmission method can be guaranteed to be fully secure.
-        </p>
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">04</span>
+            Data Sharing and Disclosure
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            Zenexa does not sell or rent personal or medical information to third parties. Data may only be shared under
+            specific circumstances, such as with trusted service providers who operate under strict confidentiality
+            agreements, with regulatory or legal authorities when required by law, or with individuals and entities that
+            you or your authorized representative have consented to.
+          </p>
+        </div>
+
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">05</span>
+            Data Security
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            Protecting sensitive medical records is central to our operations. We use administrative, technical, and
+            physical safeguards including encryption of data in transit and at rest, role-based access controls,
+            multi-factor authentication, and regular security audits. While we follow leading industry practices and
+            compliance standards, no electronic storage or transmission method can be guaranteed to be fully secure.
+          </p>
+        </div>
+
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">06</span>
+            Your Rights
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            Depending on applicable laws, you may have rights over your personal data. These may include the right to
+            access copies of the information we hold about you, correct or update inaccuracies, request deletion of
+            records subject to legal and healthcare retention requirements, or restrict certain processing activities
+            where permitted by law.
+          </p>
+        </div>
+
+        <div data-aos="fade-up">
+          <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+            <span
+              class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">07</span>
+            Updates and Contact
+          </h2>
+          <p class="text-slate-600 leading-relaxed text-lg">
+            We may update this Privacy Policy from time to time to reflect changes in technology, regulations, or
+            business practices. The revised version will be posted on this page with a new effective date. We encourage
+            you to review it periodically. If you have any questions or requests regarding this Privacy Policy or how we
+            manage your data, please contact us at <a href="mailto:datagovernance@zenexainfotech.com"
+              class="text-teal-600 font-bold hover:underline">datagovernance@zenexainfotech.com</a>.
+          </p>
+        </div>
+
       </div>
     </div>
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
-           Your Rights
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-        Depending on applicable laws, you may have rights over your personal data. These may include the right to access copies of the information we hold about you, correct or update inaccuracies, request deletion of records subject to legal and healthcare retention requirements, or restrict certain processing activities where permitted by law.
-        </p>
-      </div>
-    </div>
-    <div class="grid grid-cols-1  gap-10 mt-12">
-      <div data-aos="fade-left" class="p-8 rounded-xl bg-gray-50 border border-gray-200">
-        <h3 class="mt-5 text-2xl font-bold text-primary">
-           Updates and Contact Information
-        </h3>
-        <p class="mt-3 text-lg font-medium text-justify text-secondary">         
-        We may update this Privacy Policy from time to time to reflect changes in technology, regulations, or business practices. The revised version will be posted on this page with a new effective date. We encourage you to review it periodically. If you have any questions or requests regarding this Privacy Policy or how we manage your data, please contact us at datagovernance@zenexainfotech.com.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<div id="footer"></div>
+  </section>
+
+  <div id="footer"></div>
 </body>
+
 </html>

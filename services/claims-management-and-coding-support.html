@@ -1,128 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claims Management & Coding Support | Zenexa Infotech</title>
-<link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
-<!-- <script src="./../assets/js/tailwind.min.js"></script> -->
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="icon" type="image/x-icon" href="./../assets/img/icon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: "#004b5b",
-          secondary: "#0a816f",
-        },
-        fontFamily: {
-          inter: ["Inter", "sans-serif"],
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claims Management & Coding Support | Zenexa Infotech</title><script>if(localStorage.theme==="dark"||(!("theme" in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark")}</script>
+  <meta name="description"
+    content="End-to-end claims processing and medical coding support to maximize reimbursements and reduce denials. Expert revenue cycle management.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="../assets/img/icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="../assets/lib/aos/dist/aos.css" rel="stylesheet">
+  <script src="../assets/lib/aos/dist/aos.js"></script><script src="../assets/js/enhanced-features.js" defer></script>
+  <script>
+    window.onload = function () {
+      AOS.init({ duration: 800, once: true, offset: 100, easing: 'ease-out-cubic' });
+      window.addEventListener('scroll', () => {
+        const headerBg = document.getElementById('header-bg');
+        if (headerBg) {
+          if (window.scrollY > 20) {
+            headerBg.classList.add('bg-white/90', 'shadow-md');
+            headerBg.classList.remove('bg-white/70');
+          } else {
+            headerBg.classList.remove('bg-white/90', 'shadow-md');
+            headerBg.classList.add('bg-white/70');
+          }
+        }
+      });
+    }
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
+          colors: { primary: "#0f766e", secondary: "#0d9488", accent: "#06b6d4" },
+          animation: { 'blob': 'blob 7s infinite', 'float': 'float 6s ease-in-out infinite' },
+          keyframes: {
+            blob: { '0%': { transform: 'translate(0px, 0px) scale(1)' }, '33%': { transform: 'translate(30px, -50px) scale(1.1)' }, '66%': { transform: 'translate(-20px, 20px) scale(0.9)' }, '100%': { transform: 'translate(0px, 0px) scale(1)' } },
+            float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } }
+          }
         }
       }
     }
-  }
-  $(function(){
-  $("#header").load("./../header.html"); 
-  $("#footer").load("./../footer.html"); 
-});
-</script>
-<style> 
-.Saira {
-  font-family: "Saira", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-#services:hover .services-box {
-  display:block !important;
-}
-#aboutus:hover .aboutus-box {
-  display:block !important;
-}
-#insights:hover .insights-box {
-  display:block !important;
-}
-header{
-  z-index: 10000!important;
-}
-  @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
-  }
-  .float-animation { animation: float 5s ease-in-out infinite; }
-  @keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  .fade-up { animation: fadeUp 1s ease-out forwards; }
-</style>
-</head>
-<body class="">
-<div class="sticky top-0" id="header"></div>
-<!-- hero section -->
-<section class="" style="background:url('./../assets/service.jpg');background-position:center;background-size:contain;background-attachment: fixed">
-  <div class="w-full px-6 bg-white/80 py-40">
-    <div class="max-w-7xl mx-auto">
-      <div class="max-w-7xl grid grid-cols-1  flex items-center justify-between">
-        <div class="absolute top-16 left-16 w-20 h-20 bg-teal-500/15 rounded-full blur-2xl float-animation"></div>
-        <div class="absolute top-40 right-20 w-28 h-28 bg-orange-500/15 rounded-full blur-2xl float-animation" style="animation-delay:1s"></div>
-        <!-- Glow Center -->
-        <div class="absolute inset-0 flex justify-center pointer-events-none">
-          <div class="w-[450px] h-[450px] bg-teal-300/20 blur-[130px] rounded-full"></div>
-        </div>
-        <div class="w-full">
-          <h2 class="md:text-[60px] Saira text-[30px] uppercase font-black text-secondary text-center leading-tight mb-10">
-        <span class="text-primary">
-          Claims Management & Coding Support
-        </span>
-        </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="w-full bg-white py-20">
-  <div class="max-w-7xl mx-auto px-6 fle flex-wrap">
-    <div class="w-full">
-      <h2 class="text-xl md:text-3xl font-semibold text-primary Saira leading-tight">
-       Accurate Medical Coding and Claims Processing to Maximize Reimbursements
-      </h2>
-      <p class="mt-6 text-secondary leading-relaxed  saira font-medium text-justify text-lg">
-        At Zenexa Infotech, we provide comprehensive support across the entire claims management lifecycle, helping healthcare organizations reduce denials, improve cash flow, and stay compliant. Our certified medical coders — including CPC, CCS, and CRC professionals — are trained in ICD-10, CPT, and HCPCS standards, ensuring precise coding based on thorough clinical documentation.
-      </p>
-       <p class="mt-6 text-secondary leading-relaxed  saira font-medium text-justify text-lg">
-       From initial claims submission to denial tracking and follow-ups, we collaborate closely with your billing or RCM team to streamline workflows, minimize rework, and accelerate the payment process. Our coding services support multiple specialties and payer types, maintaining high accuracy and adherence to compliance guidelines.
-      </p>
-       <p class="mt-6 text-secondary leading-relaxed  saira font-medium text-justify text-lg">
-        Zenexa’s scalable approach is designed to boost clean claim rates, reduce administrative overhead, and shorten your revenue cycle without compromising on data integrity or regulatory standards.
-      </p>
-    </div>
-  </div>
-</section>
+    $(function () { $("#header").load("../header.html"); $("#footer").load("../footer-ultimate.html");$("#live-chat").load("../components/live-chat-widget.html");$("#newsletter").load("../components/newsletter-popup.html"); });
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
 
-<section class="w-full Saira py-20">
-  <div class="max-w-7xl px-8 mx-auto">
-    <div class="w-full bg-secondary rounded-xl px-10 py-8 grid grid-cols-1 md:grid-cols-3 items-center">
-      <!-- Text -->
-      <div class="md:col-span-2">
-        <h3 class="text-2xl mb-10 font-bold text-white">
-          Claims Management & Coding Support
-        </h3>
-        <a href="./../contact-us.html" class="mt-6 px-5 py-2.5 bg-white hover:bg-gray-200  font-semibold text-primary rounded-md text-sm">
-          Book Now
-        </a>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden selection:bg-indigo-200 selection:text-indigo-900">
+  <div id="header"></div>
+
+  <!-- Hero Section -->
+  <section
+    class="relative pt-32 pb-24 overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 min-h-[75vh] flex items-center">
+    <div class="absolute inset-0 z-0">
+      <div
+        class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSg5OSwxMDIsMjQxLDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-40">
       </div>
-      <div class="flex justify-center mt-10 md:mt-0"><img src="./../assets/serivce-3.jpg" class="w-40 h-40 rounded-full object-cover" style="animation-delay:0.5s" alt="Person"/></div>
+      <div
+        class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-indigo-500/20 rounded-full blur-[150px] animate-blob">
+      </div>
+      <div
+        class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-purple-500/20 rounded-full blur-[150px] animate-blob animation-delay-2000">
+      </div>
     </div>
-  </div>
-</section>
-<div id="footer"></div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-indigo-300 text-sm font-bold mb-6">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd" />
+            </svg>
+            Revenue Cycle Excellence
+          </div>
+
+          <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 tracking-tight leading-tight">
+            Claims Management & <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Coding Support</span>
+          </h1>
+
+          <p class="text-xl text-slate-200 mb-8 leading-relaxed">
+            End-to-end claims processing and expert medical coding to maximize reimbursements and reduce denials
+            effectively.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="../contact-us.html"
+              class="px-8 py-4 bg-white text-indigo-900 rounded-xl font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+              Get Started
+            </a>
+            <a href="#features"
+              class="px-8 py-4 bg-transparent border border-white/30 text-white rounded-xl font-bold hover:bg-white/10 transition-all duration-300">
+              Learn More
+            </a>
+          </div>
+        </div>
+
+        <div data-aos="fade-left" class="relative hidden lg:block">
+          <div
+            class="relative w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center">
+            <div class="text-center p-12">
+              <div class="text-8xl font-black text-white mb-4">$$$</div>
+              <div class="text-3xl font-bold text-white/80">Revenue Optimization</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-32 bg-white relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-20">
+        <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          Maximize Your <span class="text-gradient">Revenue Cycle</span>
+        </h2>
+        <p class="text-xl text-slate-600">
+          Comprehensive claims management and coding services that drive financial performance.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div data-aos="fade-up" data-aos-delay="0"
+          class="group p-8 rounded-2xl bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Higher Reimbursement</h3>
+          <p class="text-slate-600 leading-relaxed">Accurate coding and clean claims submission increase payment rates.
+          </p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="100"
+          class="group p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Reduced Denials</h3>
+          <p class="text-slate-600 leading-relaxed">Proactive denial management and appeals reduce revenue leakage.</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200"
+          class="group p-8 rounded-2xl bg-gradient-to-br from-pink-50 to-rose-50 border border-pink-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <div
+            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 transition-transform">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Faster Payments</h3>
+          <p class="text-slate-600 leading-relaxed">Streamlined processing accelerates your revenue cycle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-32 bg-slate-50 relative overflow-hidden">
+    <div
+      class="absolute top-0 right-0 w-[800px] h-[800px] bg-indigo-100/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            Complete <span class="text-gradient">Revenue Cycle</span> Management
+          </h2>
+          <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+            Our claims management and coding support services encompass the entire revenue cycle—from charge capture and
+            coding to claims submission, denial management, and payment posting.
+          </p>
+          <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+            We employ certified professional coders (CPC) who ensure accurate ICD-10, CPT, and HCPCS coding, maximizing
+            reimbursement while maintaining compliance with payer requirements.
+          </p>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            Our proactive denial management team identifies patterns, appeals rejected claims, and implements corrective
+            measures to prevent future denials.
+          </p>
+        </div>
+
+        <div data-aos="fade-left" class="space-y-6">
+          <div class="p-6 bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Medical Coding</h4>
+                <p class="text-slate-600">Certified coders ensure accurate ICD-10, CPT, and HCPCS coding.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-purple-600 shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Claims Submission</h4>
+                <p class="text-slate-600">Clean claims submission with real-time eligibility verification.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-pink-100 flex items-center justify-center text-pink-600 shrink-0">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-slate-900 mb-2">Denial Management</h4>
+                <p class="text-slate-600">Proactive appeals and root cause analysis to reduce denials.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-indigo-900 to-purple-900"></div>
+    <div class="absolute inset-0 bg-[url('../assets/hero_bg.jpeg')] bg-cover bg-center opacity-10 mix-blend-overlay">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-3 gap-8 items-center">
+        <div class="lg:col-span-2" data-aos="fade-right">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Boost Your <span
+              class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Revenue Today</span>
+          </h2>
+          <p class="text-xl text-slate-300">
+            Let our experts optimize your claims management and coding processes.
+          </p>
+        </div>
+        <div data-aos="fade-left" class="flex justify-center lg:justify-end">
+          <a href="../contact-us.html"
+            class="px-10 py-5 bg-white text-indigo-900 rounded-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 text-lg inline-block">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div><div id="live-chat"></div><div id="newsletter"></div>
 </body>
+
 </html>

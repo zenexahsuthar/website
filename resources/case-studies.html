@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | Zenexa Infotech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="../assets/img/icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="../assets/lib/aos/dist/aos.css" rel="stylesheet">
+    <script src="../assets/lib/aos/dist/aos.js"></script>
+
+    <script>
+        window.onload = function () {
+            AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-cubic' });
+        }
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
+                    colors: { primary: "#0f766e", secondary: "#0d9488", accent: "#06b6d4", dark: "#0f172a" },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+        $(function () { $("#header").load("../header.html"); $("#footer").load("../footer.html"); });
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden selection:bg-blue-200 selection:text-blue-900">
+    <div id="header" class="relative z-[1000]"></div>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-24 overflow-hidden bg-slate-900 min-h-[60vh] flex items-center">
+        <div class="absolute inset-0 z-0">
+            <div
+                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSg1OSwxMzAsMjQ2LDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-20">
+            </div>
+            <div
+                class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-blue-500/10 rounded-full blur-[120px] animate-blob">
+            </div>
+            <div
+                class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-indigo-500/10 rounded-full blur-[120px] animate-blob animation-delay-2000">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <div data-aos="fade-down"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-blue-300 text-sm font-bold mb-8">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                        clip-rule="evenodd" />
+                </svg>
+                Success Stories
+            </div>
+            <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight">
+                Proven <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Results</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                Real-world examples of how Zenexa Infotech drives efficiency, accuracy, and revenue growth for
+                healthcare organizations.
+            </p>
+        </div>
+    </section>
+
+    <!-- Case Studies Grid -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <!-- Case Study 1 -->
+            <div data-aos="fade-up"
+                class="bg-white rounded-[2rem] p-10 shadow-xl shadow-blue-900/5 border border-slate-100 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 group relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50 group-hover:opacity-100 transition-opacity">
+                </div>
+
+                <div class="relative z-10">
+                    <div class="flex items-center gap-5 mb-8">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg shadow-blue-500/30">
+                            H</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-900">Major Health Plan</h3>
+                            <p class="text-blue-600 font-medium">Risk Adjustment Optimization</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 mb-10">
+                        <div class="bg-slate-50 rounded-xl p-5 border border-slate-100">
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">The Challenge
+                            </h4>
+                            <p class="text-slate-700 leading-relaxed">High volume of unverified diagnoses leading to
+                                potential revenue loss and significant compliance risks during audits.</p>
+                        </div>
+                        <div class="bg-blue-50 rounded-xl p-5 border border-blue-100">
+                            <h4 class="text-xs font-bold text-blue-500 uppercase tracking-wider mb-2">Our Solution</h4>
+                            <p class="text-slate-700 leading-relaxed">Implemented AI-assisted chart abstraction combined
+                                with a rigorous multi-tier human QA process.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div
+                            class="text-center p-4 rounded-2xl bg-slate-50 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
+                            <span
+                                class="block text-4xl font-extrabold text-blue-600 group-hover:text-white mb-1">99.2%</span>
+                            <span class="text-xs font-bold uppercase tracking-wide opacity-70">Coding Accuracy</span>
+                        </div>
+                        <div
+                            class="text-center p-4 rounded-2xl bg-slate-50 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300">
+                            <span
+                                class="block text-4xl font-extrabold text-indigo-600 group-hover:text-white mb-1">$2.5M</span>
+                            <span class="text-xs font-bold uppercase tracking-wide opacity-70">Revenue Recovered</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div data-aos="fade-up" data-aos-delay="100"
+                class="bg-white rounded-[2rem] p-10 shadow-xl shadow-teal-900/5 border border-slate-100 hover:shadow-2xl hover:shadow-teal-500/10 transition-all duration-500 group relative overflow-hidden">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-teal-50 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50 group-hover:opacity-100 transition-opacity">
+                </div>
+
+                <div class="relative z-10">
+                    <div class="flex items-center gap-5 mb-8">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg shadow-teal-500/30">
+                            R</div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-900">Regional Provider Group</h3>
+                            <p class="text-teal-600 font-medium">Medical Record Retrieval</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 mb-10">
+                        <div class="bg-slate-50 rounded-xl p-5 border border-slate-100">
+                            <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">The Challenge
+                            </h4>
+                            <p class="text-slate-700 leading-relaxed">Slow turnaround times for record retrieval causing
+                                delays in HEDIS reporting and quality measure gaps.</p>
+                        </div>
+                        <div class="bg-teal-50 rounded-xl p-5 border border-teal-100">
+                            <h4 class="text-xs font-bold text-teal-500 uppercase tracking-wider mb-2">Our Solution</h4>
+                            <p class="text-slate-700 leading-relaxed">Deployed automated retrieval bots and a dedicated
+                                provider outreach team to streamline the process.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div
+                            class="text-center p-4 rounded-2xl bg-slate-50 group-hover:bg-teal-500 group-hover:text-white transition-colors duration-300">
+                            <span
+                                class="block text-4xl font-extrabold text-teal-600 group-hover:text-white mb-1">40%</span>
+                            <span class="text-xs font-bold uppercase tracking-wide opacity-70">Faster Turnaround</span>
+                        </div>
+                        <div
+                            class="text-center p-4 rounded-2xl bg-slate-50 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
+                            <span
+                                class="block text-4xl font-extrabold text-emerald-600 group-hover:text-white mb-1">100%</span>
+                            <span class="text-xs font-bold uppercase tracking-wide opacity-70">Deadline
+                                Compliance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+</body>
+
+</html>

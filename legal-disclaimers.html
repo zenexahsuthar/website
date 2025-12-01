@@ -1,164 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Legal Disclaimers | Zenexa Infotech</title>
-<link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
-<!-- <script src="./../assets/js/tailwind.min.js"></script> -->
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link href="./assets/lib/aos/dist/aos.css" rel="stylesheet">
-<script src="./assets/lib/aos/dist/aos.js"></script>
-<script>
-  window.onload = function()
-  {
-  AOS.init();
-  }
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          primary: "#004b5b",
-          secondary: "#0a816f",
-        },
-        fontFamily: {
-          inter: ["Inter", "sans-serif"],
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legal Disclaimers | Zenexa Infotech</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="./assets/lib/aos/dist/aos.css" rel="stylesheet">
+  <script src="./assets/lib/aos/dist/aos.js"></script>
+
+  <script>
+    window.onload = function () {
+      AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-cubic' });
+    }
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
+          colors: { primary: "#0f766e", secondary: "#0d9488", accent: "#06b6d4", dark: "#0f172a" }
         }
       }
     }
-  }
-    $(function(){
-  $("#header").load("./../header.html"); 
-  $("#footer").load("./../footer.html"); 
-});
-</script>
-<style> 
-.Saira {
-  font-family: "Saira", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-#services:hover .services-box {
-  display:block !important;
-}
-#aboutus:hover .aboutus-box {
-  display:block !important;
-}
-#insights:hover .insights-box {
-  display:block !important;
-}
-header{
-  z-index: 10000!important;
-}
-  @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0); }
-  }
-  .float-animation { animation: float 5s ease-in-out infinite; }
-  @keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(40px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  .fade-up { animation: fadeUp 1s ease-out forwards; }
-</style>
+    $(function () { $("#header").load("./header.html"); $("#footer").load("./footer.html"); });
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Outfit', sans-serif;
+    }
+  </style>
 </head>
-<body class="">
-<div class="sticky top-0" id="header"></div>
- <section class="bg-white py-24">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-      <h1 data-aos="fade-up" class="text-[40px] md:text-[50px] font-bold text-secondary">
-      <span class="text-primary Saira">
-        Legal
-      </span>
-        Disclaimers
-      </h1>
-    </div>
-    <div class="max-w-7xl mx-auto flex grid md:grid-cols-2">
-      <div  class="py-48 h-[600px] md:sticky top-16">
-        <p class="mt-4 text-secondary leading-relaxed text-xl font-medium justify-between text-justify">Zenexa Infotech provides record retrieval services only and does not give medical advice. We are not liable for errors in third-party records, delays, or misuse of information. While we use industry-standard security, absolute protection cannot be guaranteed. Clients are responsible for legal compliance. Third-party services are outside our control. Our services operate under Indian jurisdiction, and all site content is Zenexa’s intellectual property.</p>
+
+<body class="bg-slate-50 text-slate-800 selection:bg-teal-200 selection:text-teal-900">
+  <div id="header" class="relative z-[1000]"></div>
+
+  <!-- Hero Section -->
+  <section class="relative pt-32 pb-20 overflow-hidden bg-slate-900 min-h-[40vh] flex items-center">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-[url('./assets/hero_bg.jpeg')] bg-cover bg-center opacity-10 mix-blend-overlay">
       </div>
-      <div class="py-20 px-10 my-auto">
-        <div class="w-full flex-wrap flex">
-          <div data-aos="fade-up" class="py-12 items-center justify-between">
-            <h2 class="text-2xl font-semibold Saira text-primary">
-              1. No Medical Advice Disclaimer
-            </h2>
-            <p class="mt-4 text-secondary leading-relaxed text-lg font-medium text-justify">
-              Zenexa Infotech provides record retrieval and processing services only. We do not provide medical advice, diagnosis, or treatment. Any medical information contained in retrieved records is provided solely as part of the authorized request and should be interpreted only by licensed healthcare professionals.
+      <div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-teal-500/10 rounded-full blur-[120px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-extrabold text-white mb-6">
+        Legal <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Disclaimers</span>
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-300 max-w-2xl mx-auto">
+        Important information regarding the scope and limitations of our services.
+      </p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Sticky Summary -->
+        <div class="hidden lg:block">
+          <div class="sticky top-32 p-8 bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100">
+            <h3 class="text-2xl font-bold text-slate-900 mb-6">Summary</h3>
+            <p class="text-slate-600 leading-relaxed text-lg mb-6">
+              Zenexa Infotech provides record retrieval services only and does not give medical advice. We are not
+              liable for errors in third-party records, delays, or misuse of information. While we use industry-standard
+              security, absolute protection cannot be guaranteed. Clients are responsible for legal compliance.
             </p>
+            <div class="flex items-center gap-2 text-sm font-bold text-teal-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Last Updated: October 2023
+            </div>
           </div>
-           <div data-aos="fade-up" class="py-12 items-center justify-between">
-            <h2 class="text-2xl font-semibold Saira text-primary">
-              2. Accuracy of Records Disclaimer
+        </div>
+
+        <!-- Detailed Disclaimers -->
+        <div class="space-y-12">
+          <div data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+              <span
+                class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">01</span>
+              No Medical Advice
             </h2>
-            <p class="mt-4 text-secondary leading-relaxed text-lg font-medium text-justify">
-              Zenexa Infotech provides record retrieval and processing services only. We do not provide medical advice, diagnosis, or treatment. Any medical information contained in retrieved records is provided solely as part of the authorized request and should be interpreted only by licensed healthcare professionals.
+            <p class="text-slate-600 leading-relaxed text-lg">
+              Zenexa Infotech provides record retrieval and processing services only. We do not provide medical advice,
+              diagnosis, or treatment. Any medical information contained in retrieved records is provided solely as part
+              of the authorized request and should be interpreted only by licensed healthcare professionals.
             </p>
           </div>
 
-           <div data-aos="fade-up" class="py-12 items-center justify-between">
-            <h2 class="text-2xl font-semibold Saira text-primary">
-              3. Confidentiality & Security Disclaimer
+          <div data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+              <span
+                class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">02</span>
+              Accuracy of Records
             </h2>
-            <p class="mt-4 text-secondary leading-relaxed text-lg font-medium text-justify">
-              
-              Zenexa uses industry-standard security measures to protect the confidentiality and integrity of information. However, no electronic transmission or storage method is 100% secure, and we cannot guarantee absolute protection against unauthorized access.
+            <p class="text-slate-600 leading-relaxed text-lg">
+              We strive for accuracy but rely on third-party custodians for the source documents. We are not responsible
+              for errors, omissions, or illegibility present in the original records provided by healthcare facilities.
             </p>
           </div>
 
-           <div data-aos="fade-up" class="py-12 items-center justify-between">
-            <h2 class="text-2xl font-semibold Saira text-primary">
-              4. Compliance Disclaimer
+          <div data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+              <span
+                class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">03</span>
+              Confidentiality & Security
             </h2>
-            <p class="mt-4 text-secondary leading-relaxed text-lg font-medium text-justify">  
-              Zenexa complies with applicable data protection laws and regulations, including HIPAA (where applicable). However, clients are responsible for ensuring that their requests, authorizations, and use of retrieved records comply with relevant local, state, national, or international laws
+            <p class="text-slate-600 leading-relaxed text-lg">
+              Zenexa uses industry-standard security measures to protect the confidentiality and integrity of
+              information. However, no electronic transmission or storage method is 100% secure, and we cannot guarantee
+              absolute protection against unauthorized access.
             </p>
           </div>
 
-           <div data-aos="fade-up" class="py-12 items-center justify-between">
-            <h2 class="text-2xl font-semibold Saira text-primary">
-              5. Third-Party Disclaimer
+          <div data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+              <span
+                class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">04</span>
+              Compliance
             </h2>
-            <p class="mt-4 text-secondary leading-relaxed text-lg font-medium text-justify">
-              Our website and services may contain links, integrations, or embedded content from third-party providers (such as analytics, cloud storage, or payment services). Zenexa is not responsible for the privacy, security, or practices of third parties. Users should review those providersâ€™ policies directly.
+            <p class="text-slate-600 leading-relaxed text-lg">
+              Zenexa complies with applicable data protection laws and regulations, including HIPAA (where applicable).
+              However, clients are responsible for ensuring that their requests, authorizations, and use of retrieved
+              records comply with relevant local, state, national, or international laws.
             </p>
           </div>
 
-           <div data-aos="fade-up" class="py-12 items-center justify-between">
-            <h2 class="text-2xl font-semibold Saira text-primary">
-              6. Limitation of Liability Disclaimer
+          <div data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+              <span
+                class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">05</span>
+              Third-Party Links
             </h2>
-            <p class="mt-4 text-secondary leading-relaxed text-lg font-medium text-justify">
-              To the fullest extent permitted by law, Zenexa Infotech shall not be liable for any indirect, incidental, or consequential damages resulting from the use of our services, including but not limited to: Delays in record retrieval Incomplete records due to third-party custodians Data breaches despite reasonable safeguards Misuse of records by clients or third parties
+            <p class="text-slate-600 leading-relaxed text-lg">
+              Our website and services may contain links, integrations, or embedded content from third-party providers.
+              Zenexa is not responsible for the privacy, security, or practices of third parties. Users should review
+              those providers' policies directly.
             </p>
           </div>
 
-           <div data-aos="fade-up" class="py-12 items-center justify-between">
-            <h2 class="text-2xl font-semibold Saira text-primary">
-              7. Jurisdiction Disclaimer
+          <div data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+              <span
+                class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">06</span>
+              Limitation of Liability
             </h2>
-            <p class="mt-4 text-secondary leading-relaxed text-lg font-medium text-justify">
-             This website and our services are controlled and operated from India. We make no representations that our services are appropriate or available in other jurisdictions. Clients accessing our services from outside India are responsible for compliance with their own local laws.
+            <p class="text-slate-600 leading-relaxed text-lg">
+              To the fullest extent permitted by law, Zenexa Infotech shall not be liable for any indirect, incidental,
+              or consequential damages resulting from the use of our services, including but not limited to delays in
+              record retrieval, incomplete records due to third-party custodians, or data breaches despite reasonable
+              safeguards.
             </p>
           </div>
 
-           <div data-aos="fade-up" class="py-12 items-center justify-between">
-            <h2 class="text-2xl font-semibold Saira text-primary">
-              8. Intellectual Property
+          <div data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+              <span
+                class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">07</span>
+              Jurisdiction
             </h2>
-            <p class="mt-4 text-secondary leading-relaxed text-lg font-medium text-justify">
-              All content, technology, and processes on this website remain the property of Zenexa Infotech unless otherwise stated. Unauthorized reproduction, distribution, or use is strictly prohibited.
+            <p class="text-slate-600 leading-relaxed text-lg">
+              This website and our services are controlled and operated from India. We make no representations that our
+              services are appropriate or available in other jurisdictions. Clients accessing our services from outside
+              India are responsible for compliance with their own local laws.
+            </p>
+          </div>
+
+          <div data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+              <span
+                class="w-8 h-8 rounded-lg bg-teal-100 text-teal-600 flex items-center justify-center text-sm">08</span>
+              Intellectual Property
+            </h2>
+            <p class="text-slate-600 leading-relaxed text-lg">
+              All content, technology, and processes on this website remain the property of Zenexa Infotech unless
+              otherwise stated. Unauthorized reproduction, distribution, or use is strictly prohibited.
             </p>
           </div>
         </div>
       </div>
     </div>
   </section>
-<div id="footer"></div>
+
+  <div id="footer"></div>
 </body>
+
 </html>

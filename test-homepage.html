@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+        .success { background: #d4edda; border-color: #c3e6cb; }
+        .error { background: #f8d7da; border-color: #f5c6cb; }
+    </style>
+</head>
+<body>
+    <h1>Homepage Component Test</h1>
+    
+    <div class="test" id="jquery-test">Testing jQuery...</div>
+    <div class="test" id="header-test">Testing Header Load...</div>
+    <div class="test" id="footer-test">Testing Footer Load...</div>
+    <div class="test" id="testimonials-test">Testing Testimonials Load...</div>
+    <div class="test" id="faq-test">Testing FAQ Load...</div>
+    
+    <h2>Header Preview:</h2>
+    <div id="header"></div>
+    
+    <h2>Footer Preview:</h2>
+    <div id="footer"></div>
+    
+    <h2>Testimonials Preview:</h2>
+    <div id="testimonials-section"></div>
+    
+    <h2>FAQ Preview:</h2>
+    <div id="faq-section"></div>
+    
+    <script>
+        $(document).ready(function() {
+            // Test jQuery
+            $('#jquery-test').addClass('success').text('✓ jQuery loaded successfully');
+            
+            // Test Header
+            $("#header").load("./header.html", function(response, status, xhr) {
+                if (status == "success") {
+                    $('#header-test').addClass('success').text('✓ Header loaded successfully');
+                } else {
+                    $('#header-test').addClass('error').text('✗ Header failed: ' + xhr.status + ' ' + xhr.statusText);
+                }
+            });
+            
+            // Test Footer
+            $("#footer").load("./footer-ultimate.html", function(response, status, xhr) {
+                if (status == "success") {
+                    $('#footer-test').addClass('success').text('✓ Footer loaded successfully');
+                } else {
+                    $('#footer-test').addClass('error').text('✗ Footer failed: ' + xhr.status + ' ' + xhr.statusText);
+                }
+            });
+            
+            // Test Testimonials
+            $("#testimonials-section").load("./components/testimonials-section.html", function(response, status, xhr) {
+                if (status == "success") {
+                    $('#testimonials-test').addClass('success').text('✓ Testimonials loaded successfully');
+                } else {
+                    $('#testimonials-test').addClass('error').text('✗ Testimonials failed: ' + xhr.status + ' ' + xhr.statusText);
+                }
+            });
+            
+            // Test FAQ
+            $("#faq-section").load("./components/faq-accordion.html", function(response, status, xhr) {
+                if (status == "success") {
+                    $('#faq-test').addClass('success').text('✓ FAQ loaded successfully');
+                } else {
+                    $('#faq-test').addClass('error').text('✗ FAQ failed: ' + xhr.status + ' ' + xhr.statusText);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
