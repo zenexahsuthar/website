@@ -4,9 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Medical Record Retrieval & Management | Zenexa Infotech</title><script>if(localStorage.theme==="dark"||(!("theme" in localStorage)&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark")}else{document.documentElement.classList.remove("dark")}</script>
-  <meta name="description"
-    content="Secure, HIPAA-compliant medical record retrieval and management for payers, legal firms, and providers. Fast turnaround times.">
+  <title>Medical Record Retrieval & Management | Zenexa Infotech</title>
+  <meta name="description" content="Secure, HIPAA-compliant medical record retrieval and management for payers, legal firms, and providers. Fast turnaround times.">
+  
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Medical Record Retrieval & Management | Zenexa Infotech">
+  <meta property="og:description" content="Secure, HIPAA-compliant medical record retrieval and management for payers, legal firms, and providers. Fast turnaround times.">
+  <meta property="og:image" content="https://zenexainfotech.com/assets/img/zenexa-asset.png">
+  <meta property="og:url" content="https://zenexainfotech.com/services/medical-record-retrieval-and-management.html">
+  <meta property="og:type" content="website">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/x-icon" href="../assets/img/icon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,63 +23,21 @@
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link href="../assets/lib/aos/dist/aos.css" rel="stylesheet">
-  <script src="../assets/lib/aos/dist/aos.js"></script><script src="../assets/js/enhanced-features.js" defer></script>
-  <script>
-    window.onload = function () {
-      AOS.init({ duration: 800, once: true, offset: 100, easing: 'ease-out-cubic' });
-      window.addEventListener('scroll', () => {
-        const headerBg = document.getElementById('header-bg');
-        if (headerBg) {
-          if (window.scrollY > 20) {
-            headerBg.classList.add('bg-white/90', 'shadow-md');
-            headerBg.classList.remove('bg-white/70');
-          } else {
-            headerBg.classList.remove('bg-white/90', 'shadow-md');
-            headerBg.classList.add('bg-white/70');
-          }
-        }
-      });
-    }
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
-          colors: { primary: "#0f766e", secondary: "#0d9488", accent: "#06b6d4" },
-          animation: { 'blob': 'blob 7s infinite', 'float': 'float 6s ease-in-out infinite' },
-          keyframes: {
-            blob: { '0%': { transform: 'translate(0px, 0px) scale(1)' }, '33%': { transform: 'translate(30px, -50px) scale(1.1)' }, '66%': { transform: 'translate(-20px, 20px) scale(0.9)' }, '100%': { transform: 'translate(0px, 0px) scale(1)' } },
-            float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } }
-          }
-        }
-      }
-    }
-    $(function () { $("#header").load("../header.html"); $("#footer").load("../footer-ultimate.html");$("#live-chat").load("../components/live-chat-widget.html");$("#newsletter").load("../components/newsletter-popup.html"); });
-  </script>
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
+  <script src="../assets/lib/aos/dist/aos.js"></script>
+  
+  <!-- Custom Styles -->
+  <link href="../assets/css/style.css" rel="stylesheet">
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: 'Outfit', sans-serif;
-    }
-
-    .text-gradient {
-      background: linear-gradient(135deg, #ec4899 0%, #e11d48 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  </style>
+  <!-- Enhanced Features -->
+  <script src="../assets/js/enhanced-features.js" defer></script>
+  
+  <!-- Main App Logic & Components -->
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/components.js" defer></script>
 </head>
 
-<body class="bg-slate-50 text-slate-800 overflow-x-hidden selection:bg-pink-200 selection:text-pink-900">
-  <div id="header"></div>
+<body class="bg-slate-50 text-slate-800 overflow-x-hidden selection:bg-teal-200 selection:text-teal-900">
+<div id="header"></div>
 
   <!-- Hero Section -->
   <section
@@ -301,5 +266,4 @@
 
   <div id="footer"></div><div id="live-chat"></div><div id="newsletter"></div>
 </body>
-
 </html>

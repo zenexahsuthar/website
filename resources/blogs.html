@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insights & News | Zenexa Infotech</title>
+    <meta name="description" content="Zenexa Infotech Healthcare Solutions">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Insights & News | Zenexa Infotech">
+    <meta property="og:description" content="Zenexa Infotech Healthcare Solutions">
+    <meta property="og:image" content="https://zenexainfotech.com/assets/img/zenexa-asset.png">
+    <meta property="og:url" content="https://zenexainfotech.com/resources/blogs.html">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="../assets/img/icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,95 +25,40 @@
     <link href="../assets/lib/aos/dist/aos.css" rel="stylesheet">
     <script src="../assets/lib/aos/dist/aos.js"></script>
 
-    <script>
-        window.onload = function () {
-            AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-cubic' });
-        }
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
-                    colors: { primary: "#0f766e", secondary: "#0d9488", accent: "#06b6d4", dark: "#0f172a" },
-                    animation: {
-                        'blob': 'blob 7s infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
-                }
-            }
-        }
-        $(function () { $("#header").load("../header.html"); $("#footer").load("../footer.html"); });
-    </script>
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
+    <!-- Custom Styles -->
+    <link href="../assets/css/style.css" rel="stylesheet">
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Outfit', sans-serif;
-        }
+    <!-- Enhanced Features -->
+    <script src="../assets/js/enhanced-features.js" defer></script>
 
-        .text-gradient {
-            background: linear-gradient(135deg, #2dd4bf 0%, #06b6d4 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
-</head>
+    class="absolute inset-0
+    bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMCwxODQsMTY2LDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]
+    opacity-20">
+    </div>
+    <div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-teal-500/10 rounded-full blur-[120px] animate-blob">
+    </div>
+    <div
+        class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-cyan-500/10 rounded-full blur-[120px] animate-blob animation-delay-2000">
+    </div>
+    </div>
 
-<body class="bg-slate-50 text-slate-800 overflow-x-hidden selection:bg-teal-200 selection:text-teal-900">
-    <div id="header" class="relative z-[1000]"></div>
-
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-24 overflow-hidden bg-slate-900 min-h-[60vh] flex items-center">
-        <div class="absolute inset-0 z-0">
-            <div
-                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMCwxODQsMTY2LDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-20">
-            </div>
-            <div
-                class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-teal-500/10 rounded-full blur-[120px] animate-blob">
-            </div>
-            <div
-                class="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-cyan-500/10 rounded-full blur-[120px] animate-blob animation-delay-2000">
-            </div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+        <div data-aos="fade-down"
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 text-sm font-bold mb-8">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" />
+            </svg>
+            Knowledge Hub
         </div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-            <div data-aos="fade-down"
-                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-teal-300 text-sm font-bold mb-8">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                        d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" />
-                </svg>
-                Knowledge Hub
-            </div>
-            <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight">
-                Latest <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Insights</span>
-            </h1>
-            <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
-                Expert analysis, industry trends, and strategic guides to help you navigate the evolving healthcare
-                landscape.
-            </p>
-        </div>
+        <h1 data-aos="fade-up" class="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight">
+            Latest <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Insights</span>
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            Expert analysis, industry trends, and strategic guides to help you navigate the evolving healthcare
+            landscape.
+        </p>
+    </div>
     </section>
 
     <!-- Blog Grid -->
@@ -240,6 +194,8 @@
     </section>
 
     <div id="footer"></div>
-</body>
+    <div id="live-chat"></div>
+    <div id="newsletter"></div>
+    </body>
 
 </html>

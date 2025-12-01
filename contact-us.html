@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Zenexa Infotech</title>
-  
-  <!-- Dark Mode Script -->
-  <script>
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  </script>
-  
+  <meta name="description"
+    content="Contact Zenexa Infotech for inquiries about our healthcare compliance and operations solutions. We are here to help.">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Contact Us | Zenexa Infotech">
+  <meta property="og:description" content="Get in touch with Zenexa Infotech for healthcare solutions.">
+  <meta property="og:image" content="https://zenexainfotech.com/assets/img/zenexa-asset.png">
+  <meta property="og:url" content="https://zenexainfotech.com/contact-us.html">
+  <meta property="og:type" content="website">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/x-icon" href="./assets/img/icon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,167 +25,16 @@
     rel="stylesheet">
   <link href="./assets/lib/aos/dist/aos.css" rel="stylesheet">
   <script src="./assets/lib/aos/dist/aos.js"></script>
-  
+
+  <!-- Custom Styles -->
+  <link href="./assets/css/style.css" rel="stylesheet">
+
   <!-- Enhanced Features -->
   <script src="./assets/js/enhanced-features.js" defer></script>
 
-  <script>
-    window.onload = function () {
-      AOS.init({
-        duration: 800,
-        once: true,
-        offset: 50,
-        easing: 'ease-out-cubic'
-      });
-
-      window.addEventListener('scroll', () => {
-        const headerBg = document.getElementById('header-bg');
-        if (headerBg) {
-          if (window.scrollY > 20) {
-            headerBg.classList.add('bg-white/90', 'shadow-md');
-            headerBg.classList.remove('bg-white/70');
-          } else {
-            headerBg.classList.remove('bg-white/90', 'shadow-md');
-            headerBg.classList.add('bg-white/70');
-          }
-        }
-      });
-    }
-
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            heading: ['"Outfit"', 'sans-serif'],
-          },
-          colors: {
-            primary: "#0f766e",
-            secondary: "#0d9488",
-            accent: "#06b6d4",
-            dark: "#0f172a",
-          },
-          animation: {
-            'blob': 'blob 7s infinite',
-            'float': 'float 6s ease-in-out infinite',
-            'pulse-glow': 'pulse-glow 3s infinite',
-            'marker-pulse': 'marker-pulse 2s infinite',
-          },
-          keyframes: {
-            blob: {
-              '0%': { transform: 'translate(0px, 0px) scale(1)' },
-              '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-              '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-              '100%': { transform: 'translate(0px, 0px) scale(1)' },
-            },
-            float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-20px)' },
-            },
-            'pulse-glow': {
-              '0%, 100%': { opacity: 1, transform: 'scale(1)' },
-              '50%': { opacity: 0.8, transform: 'scale(1.05)' },
-            },
-            'marker-pulse': {
-              '0%': { boxShadow: '0 0 0 0 rgba(20, 184, 166, 0.7)' },
-              '70%': { boxShadow: '0 0 0 15px rgba(20, 184, 166, 0)' },
-              '100%': { boxShadow: '0 0 0 0 rgba(20, 184, 166, 0)' }
-            },
-            shimmer: {
-              '100%': { transform: 'translateX(100%)' }
-            }
-          }
-        }
-      }
-    }
-
-    $(function () {
-      $("#header").load("./header.html");
-      $("#footer").load("./footer-ultimate.html");
-      $("#live-chat").load("./components/live-chat-widget.html");
-      $("#newsletter").load("./components/newsletter-popup.html");
-    });
-  </script>
-
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: 'Outfit', sans-serif;
-    }
-
-    .glass-card {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-    }
-
-    .text-gradient {
-      background: linear-gradient(135deg, #0f766e 0%, #06b6d4 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* Map Styles */
-    .map-container {
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg');
-      background-size: cover;
-      background-position: center;
-      background-color: #0f172a;
-      /* Slate 900 */
-      /* Filter to make it look dark/techy */
-      filter: grayscale(100%) invert(100%) brightness(0.7) contrast(1.2);
-    }
-
-    /* Since we inverted the container, we need to re-invert content or handle colors carefully. 
-       Actually, a better approach for a "tech" map is a dark SVG. 
-       Let's use a CSS radial gradient overlay instead of complex filters on the image itself 
-       to ensure markers pop. */
-
-    .tech-map-bg {
-      background-color: #0f172a;
-      background-image:
-        radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 1) 100%),
-        url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    .map-marker {
-      position: absolute;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .map-marker:hover {
-      transform: scale(1.2) translateY(-5px);
-      z-index: 50;
-    }
-
-    .map-tooltip {
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      transform: translateY(10px);
-    }
-
-    .map-marker:hover .map-tooltip {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-  </style>
+  <!-- Main App Logic & Components -->
+  <script src="./assets/js/main.js" defer></script>
+  <script src="./assets/js/components.js" defer></script>
 </head>
 
 <body class="bg-slate-50 text-slate-800 overflow-x-hidden selection:bg-teal-200 selection:text-teal-900">
@@ -373,8 +222,8 @@
             </div>
 
             <!-- USA Marker (Texas) ~ Top: 38%, Left: 22% -->
-            <div class="map-marker" style="top: 38%; left: 22%;"
-              onclick="window.open('https://www.google.com/maps/search/Texas,+USA', '_blank')">
+            <a class="map-marker block" style="top: 38%; left: 22%;"
+              href="https://www.google.com/maps/search/Texas,+USA" target="_blank">
               <div class="relative w-6 h-6">
                 <div class="absolute inset-0 bg-teal-500 rounded-full animate-marker-pulse"></div>
                 <div class="absolute inset-1 bg-white rounded-full shadow-lg flex items-center justify-center">
@@ -394,11 +243,11 @@
                   class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white/20">
                 </div>
               </div>
-            </div>
+            </a>
 
             <!-- Canada Marker (Waterloo) ~ Top: 32%, Left: 26% -->
-            <div class="map-marker" style="top: 32%; left: 26%;"
-              onclick="window.open('https://www.google.com/maps/search/Waterloo,+Ontario,+Canada', '_blank')">
+            <a class="map-marker block" style="top: 32%; left: 26%;"
+              href="https://www.google.com/maps/search/Waterloo,+Ontario,+Canada" target="_blank">
               <div class="relative w-6 h-6">
                 <div class="absolute inset-0 bg-cyan-500 rounded-full animate-marker-pulse"
                   style="animation-delay: 0.5s"></div>
@@ -418,11 +267,11 @@
                   class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white/20">
                 </div>
               </div>
-            </div>
+            </a>
 
             <!-- India Marker (Gandhinagar) ~ Top: 48%, Left: 68% -->
-            <div class="map-marker" style="top: 48%; left: 68%;"
-              onclick="window.open('https://www.google.com/maps/search/Gandhinagar,+Gujarat,+India', '_blank')">
+            <a class="map-marker block" style="top: 48%; left: 68%;"
+              href="https://www.google.com/maps/search/Gandhinagar,+Gujarat,+India" target="_blank">
               <div class="relative w-6 h-6">
                 <div class="absolute inset-0 bg-blue-500 rounded-full animate-marker-pulse" style="animation-delay: 1s">
                 </div>
@@ -442,7 +291,7 @@
                   class="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-white/20">
                 </div>
               </div>
-            </div>
+            </a>
 
           </div>
         </div>

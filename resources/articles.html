@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles | Zenexa Infotech</title>
+    <meta name="description" content="Zenexa Infotech Healthcare Solutions">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Articles | Zenexa Infotech">
+    <meta property="og:description" content="Zenexa Infotech Healthcare Solutions">
+    <meta property="og:image" content="https://zenexainfotech.com/assets/img/zenexa-asset.png">
+    <meta property="og:url" content="https://zenexainfotech.com/resources/articles.html">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="../assets/img/icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,52 +25,20 @@
     <link href="../assets/lib/aos/dist/aos.css" rel="stylesheet">
     <script src="../assets/lib/aos/dist/aos.js"></script>
 
-    <script>
-        window.onload = function () {
-            AOS.init({ duration: 800, once: true, offset: 50, easing: 'ease-out-cubic' });
-        }
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
-                    colors: { primary: "#0f766e", secondary: "#0d9488", accent: "#06b6d4", dark: "#0f172a" }
-                }
-            }
-        }
-        $(function () { $("#header").load("../header.html"); $("#footer").load("../footer.html"); });
-    </script>
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
+    <!-- Custom Styles -->
+    <link href="../assets/css/style.css" rel="stylesheet">
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Outfit', sans-serif;
-        }
-    </style>
-</head>
+    <!-- Enhanced Features -->
+    <script src="../assets/js/enhanced-features.js" defer></script>
 
-<body class="bg-slate-50 text-slate-800">
-    <div id="header" class="relative z-[1000]"></div>
-
-    <!-- Hero -->
-    <section class="relative pt-32 pb-20 overflow-hidden bg-slate-900">
-        <div
-            class="absolute inset-0 bg-[url('../assets/hero_bg.jpeg')] bg-cover bg-center opacity-20 mix-blend-overlay">
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/90"></div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
-            <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-bold text-white mb-6">Knowledge <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Base</span></h1>
-            <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-300 max-w-2xl mx-auto">In-depth
-                articles, whitepapers, and technical guides for healthcare professionals.</p>
-        </div>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900/90"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+        <h1 data-aos="fade-up" class="text-4xl md:text-6xl font-bold text-white mb-6">Knowledge <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400">Base</span></h1>
+        <p data-aos="fade-up" data-aos-delay="100" class="text-xl text-slate-300 max-w-2xl mx-auto">In-depth
+            articles, whitepapers, and technical guides for healthcare professionals.</p>
+    </div>
     </section>
 
     <!-- Articles List -->
@@ -148,6 +125,8 @@
     </section>
 
     <div id="footer"></div>
-</body>
+    <div id="live-chat"></div>
+    <div id="newsletter"></div>
+    </body>
 
 </html>
